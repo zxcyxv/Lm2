@@ -8,6 +8,7 @@
   않는다.
 - 실행 전 질문, 비교군, seed, split, 성공 기준을 manifest에 기록한다.
 - metric은 TSV, 해석은 Markdown으로 분리한다.
-- checkpoint, tokenized data, smoke artifact는 Git에 넣지 않는다.
+- checkpoint와 smoke artifact는 Git에 넣지 않는다. 재현용으로 승인된
+  tokenized data는 checksum manifest와 provenance를 함께 둔다.
 - 기존 record와 producer는 대체 코드로 재현되기 전 삭제하지 않는다.
 - 상충하는 evidence는 삭제하지 않고 상태와 범위를 명시한다.

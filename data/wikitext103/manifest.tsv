@@ -1,0 +1,5 @@
+split	path	tokens	bytes	sha256
+train	data/wikitext103/train.bin	55000000	110000000	9d931b6823da9bd82605164f10c2c0ce518f4a75c95574fe8b4035efd2ab7ef6
+validation	data/wikitext103/validation.bin	283510	567020	eb2539b969f967b33a175842d6a7398de0b52265ef012d16f5dbc6f221c3b9a2
+test	data/wikitext103/test.bin	324096	648192	32287864ecce6230b5404f7fec1785e7f1fc4e9a023e86907e37a08d12f07b78
+tokenizer	data/wikitext103/tokenizer.json	8192	552775	1155e79411f38a19d40bf13e32e5cdf38cbfc6d8fdb999df057650b70aacf590

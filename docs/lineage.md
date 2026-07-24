@@ -37,6 +37,7 @@ spectral constraint와 noise tolerance 분석도 이 단계에 속한다.
 
 - `train_k4_ha_skew_three_trajectory_detached_ce_13m.py`
 - `train_k4_ha_skew_three_trajectory_detached_ce_tau005_shared_13m.py`
+- `train_k4_ha_skew_three_trajectory_detached_ce_tau005_shared_h1_online_mse_13m.py`
 
 세 noisy trajectory 각각에 대해 네 토큰 CE 합을 계산한다.
 
@@ -52,6 +53,19 @@ L=\mathbb{E}_{A}\left[\sum_i w_i C_i/4\right].
 실제 prefix, clean K orbit, sigma predictor와 inverse-prefix 계산은
 trajectory 사이에 공유된다. literal prefix expansion과 logits 및
 gradient가 일치하는지 단위 테스트로 검증한다.
+
+마지막 wrapper는 동일한 tau-0.05 trajectory CE에 clean h1 정합만
+추가한다.
+
+\[
+L=L_{\mathrm{trajectory\ CE}}+
+\frac{\lVert Kh_A-h_{B,\mathrm{online}}\rVert^2}
+{\lVert h_{B,\mathrm{online}}\rVert^2}.
+\]
+
+`hB_online`은 `hA`와 같은 현재 encoder pass에서 만들며 detach하지
+않는다. h2--h4 MSE와 EMA target은 사용하지 않는다. 이 변형은
+사전등록만 완료됐고 아직 실험 evidence가 아니다.
 
 ## 범위 밖
 

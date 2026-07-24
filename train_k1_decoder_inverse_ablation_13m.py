@@ -12,6 +12,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
+from rotlm.dataset import token_memmap
 from rotlm.models.k1_decoder_ablation import K1DecoderAblationLM
 
 
@@ -58,7 +59,7 @@ def trainable_parameter_count(model: torch.nn.Module) -> int:
 
 
 def memmap(split: str):
-    return np.memmap(f"data/wikitext103/{split}.bin", dtype=np.uint16, mode="r")
+    return token_memmap(split)
 
 
 def windows(data, starts: torch.Tensor) -> torch.Tensor:

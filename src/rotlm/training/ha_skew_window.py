@@ -569,6 +569,8 @@ def sparse_multi_trajectory_compounding_noise_loss(
     trajectories: int,
     temperature: float = 1.0,
     mse_weight: float = 0.0,
+    mse_horizons: tuple[int, ...] | None = None,
+    detach_mse_targets: bool = False,
     noise_generator: torch.Generator | None = None,
 ) -> tuple[
     torch.Tensor,
@@ -593,8 +595,11 @@ def sparse_multi_trajectory_compounding_noise_loss(
         d[-T log mean_i exp(-C_i/T)] = sum_i softmax(-C/T)_i dC_i.
 
     ``mse_weight=0`` removes hidden-state regression from the optimization
-    graph.  A nonzero value reuses the same posterior responsibilities, so a
-    later MSE ablation does not require a different trajectory construction.
+    graph. For a nonzero weight, ``mse_horizons`` uses one-based horizon
+    indices and defaults to every horizon. The gold states always come from
+    the same current online encoder pass as the real prefix. By default their
+    graph remains attached, so MSE can shape both the predicted orbit and the
+    online encoder geometry.
     """
     if window.ndim != 2:
         raise ValueError("window must have shape [batch,length]")
@@ -604,6 +609,22 @@ def sparse_multi_trajectory_compounding_noise_loss(
         raise ValueError("temperature must be positive")
     if mse_weight < 0:
         raise ValueError("mse_weight must be non-negative")
+    selected_mse_horizons = (
+        tuple(range(1, horizons + 1))
+        if mse_horizons is None
+        else tuple(mse_horizons)
+    )
+    if (
+        not selected_mse_horizons
+        or len(set(selected_mse_horizons)) != len(selected_mse_horizons)
+        or any(
+            horizon < 1 or horizon > horizons
+            for horizon in selected_mse_horizons
+        )
+    ):
+        raise ValueError(
+            f"mse_horizons must be unique values in [1,{horizons}]"
+        )
 
     batch = window.shape[0]
     sparse = forward_sparse_multi_trajectory_compounding_noise_window(
@@ -663,9 +684,26 @@ def sparse_multi_trajectory_compounding_noise_loss(
     mse = marginal_ce.new_zeros(())
     loss = marginal_ce
     if mse_weight != 0.0:
-        trajectory_mse = relative_mse_rows(
+        mse_targets = (
+            sparse.gold_states.detach()
+            if detach_mse_targets
+            else sparse.gold_states
+        )
+        trajectory_mse_by_horizon = relative_mse_rows(
             sparse.predicted_states,
-            sparse.gold_states[:, None],
+            mse_targets[:, None],
+        )
+        horizon_indices = torch.tensor(
+            [
+                horizon - 1
+                for horizon in selected_mse_horizons
+            ],
+            device=trajectory_mse_by_horizon.device,
+            dtype=torch.long,
+        )
+        trajectory_mse = trajectory_mse_by_horizon.index_select(
+            -1,
+            horizon_indices,
         ).mean(dim=-1)
         mse = (
             responsibilities * trajectory_mse

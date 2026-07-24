@@ -6,7 +6,15 @@ build/
 *.egg-info/
 .ipynb_checkpoints/
 
-data/
+data/*
+!data/wikitext103/
+data/wikitext103/*
+!data/wikitext103/README.md
+!data/wikitext103/manifest.tsv
+!data/wikitext103/tokenizer.json
+!data/wikitext103/train.bin.gz
+!data/wikitext103/validation.bin
+!data/wikitext103/test.bin
 outputs/
 *.pt
 *.pth

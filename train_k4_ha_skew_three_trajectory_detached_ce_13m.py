@@ -1,4 +1,4 @@
-"""Train a three-sample, four-token latent trajectory mixture with CE only."""
+"""Train a three-sample, four-token latent trajectory mixture."""
 from __future__ import annotations
 
 import argparse
@@ -45,6 +45,8 @@ HORIZONS = 4
 TRAJECTORIES = 3
 TEMPERATURE = 1.0
 MSE_WEIGHT = 0.0
+MSE_HORIZONS: tuple[int, ...] | None = None
+DETACH_MSE_TARGETS = False
 ANCHOR_STRIDE = 1
 WINDOW_LENGTH = CONTEXT + HORIZONS
 ANCHOR_COUNT = len(range(0, CONTEXT, ANCHOR_STRIDE))
@@ -110,6 +112,8 @@ def objective(
         trajectories=TRAJECTORIES,
         temperature=TEMPERATURE,
         mse_weight=MSE_WEIGHT,
+        mse_horizons=MSE_HORIZONS,
+        detach_mse_targets=DETACH_MSE_TARGETS,
         noise_generator=noise_generator,
     )
 
@@ -217,8 +221,8 @@ def preflight(
         allow_unused=True,
     )
     for name, gradient in (
-        ("CE to K", k_gradient),
-        ("CE to sigma predictor", sigma_gradient),
+        ("objective to K", k_gradient),
+        ("objective to sigma predictor", sigma_gradient),
     ):
         if (
             gradient is None
@@ -226,10 +230,38 @@ def preflight(
             or not bool(gradient.norm() > 0)
         ):
             raise RuntimeError(f"no finite {name} gradient")
-    if target_gradient is not None and bool(
-        torch.count_nonzero(target_gradient)
-    ):
-        raise RuntimeError("CE-only loss reaches the MSE gold target")
+    selected_mse_horizons = (
+        tuple(range(1, HORIZONS + 1))
+        if MSE_HORIZONS is None
+        else MSE_HORIZONS
+    )
+    target_gradient_by_horizon = torch.zeros(
+        HORIZONS,
+        device=window.device,
+    )
+    if target_gradient is not None:
+        target_gradient_by_horizon = (
+            target_gradient.float()
+            .square()
+            .sum(dim=(0, 1, 3))
+            .sqrt()
+        )
+    target_should_be_attached = (
+        MSE_WEIGHT != 0.0 and not DETACH_MSE_TARGETS
+    )
+    for horizon in range(1, HORIZONS + 1):
+        has_gradient = bool(
+            target_gradient_by_horizon[horizon - 1] > 0
+        )
+        expected = (
+            target_should_be_attached
+            and horizon in selected_mse_horizons
+        )
+        if has_gradient != expected:
+            raise RuntimeError(
+                "unexpected online MSE target gradient at "
+                f"horizon {horizon}: expected={expected}"
+            )
     _, _, optional_mse, optional_output = (
         sparse_multi_trajectory_compounding_noise_loss(
             model,
@@ -240,6 +272,8 @@ def preflight(
             trajectories=TRAJECTORIES,
             temperature=TEMPERATURE,
             mse_weight=1.0,
+            mse_horizons=(1,),
+            detach_mse_targets=False,
             noise_generator=torch.Generator(
                 device="cuda"
             ).manual_seed(SEED + 4244),
@@ -283,11 +317,19 @@ def preflight(
         "initial_loss": float(loss.detach()),
         "initial_marginal_ce": float(marginal_ce.detach()),
         "initial_monitor_mse": float(monitor_mse.detach()),
-        "initial_ce_k_gradient_norm": float(k_gradient.norm()),
-        "initial_ce_sigma_gradient_norm": float(
+        "initial_objective_k_gradient_norm": float(k_gradient.norm()),
+        "initial_objective_sigma_gradient_norm": float(
             sigma_gradient.norm()
         ),
-        "ce_gold_target_gradient_norm": 0.0,
+        "objective_gold_target_gradient_norm": float(
+            target_gradient_by_horizon.norm()
+        ),
+        "objective_h1_gold_target_gradient_norm": float(
+            target_gradient_by_horizon[0]
+        ),
+        "objective_later_gold_target_gradient_norm": float(
+            target_gradient_by_horizon[1:].norm()
+        ),
         "optional_mse_gold_target_gradient_norm": float(
             optional_mse_target_gradient.norm()
         ),
@@ -571,6 +613,9 @@ def save_checkpoint(
                 "trajectories": TRAJECTORIES,
                 "temperature": TEMPERATURE,
                 "mse_weight": MSE_WEIGHT,
+                "mse_horizons": MSE_HORIZONS,
+                "mse_target_encoder": "online_shared",
+                "detach_mse_targets": DETACH_MSE_TARGETS,
                 "anchor_stride": ANCHOR_STRIDE,
                 "effective_batch": EFFECTIVE_BATCH,
                 "microbatch": MICROBATCH,
@@ -683,6 +728,14 @@ def main() -> None:
             ("trajectories", TRAJECTORIES),
             ("temperature", TEMPERATURE),
             ("mse_weight", MSE_WEIGHT),
+            (
+                "mse_horizons",
+                "all"
+                if MSE_HORIZONS is None
+                else ",".join(map(str, MSE_HORIZONS)),
+            ),
+            ("mse_target_encoder", "online_shared"),
+            ("detach_mse_targets", DETACH_MSE_TARGETS),
             ("anchor_stride", ANCHOR_STRIDE),
             ("anchor_count", ANCHOR_COUNT),
             ("unique_labels_per_example", ANCHOR_COUNT * HORIZONS),
@@ -710,7 +763,26 @@ def main() -> None:
                 "trajectory_shared_computation",
                 "encoder_clean_K_sigma_and_inverse_prefix",
             ),
-            ("hidden_state_mse", "disabled_weight_0"),
+            (
+                "hidden_state_mse",
+                "disabled_weight_0"
+                if MSE_WEIGHT == 0.0
+                else (
+                    "online_"
+                    + (
+                        "detached"
+                        if DETACH_MSE_TARGETS
+                        else "attached"
+                    )
+                    + "_relative_mse_"
+                    + (
+                        "all_horizons"
+                        if MSE_HORIZONS is None
+                        else "horizons_"
+                        + "_".join(map(str, MSE_HORIZONS))
+                    )
+                ),
+            ),
             *preflight_values.items(),
         ):
             writer.writerow((key, value))

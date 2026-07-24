@@ -1,18 +1,18 @@
 """Small shared helpers used by the MSE+CE evaluation scripts."""
 from __future__ import annotations
 
-from pathlib import Path
-
 import numpy as np
 import torch
 
+from rotlm.dataset import DEFAULT_DATA_ROOT, token_memmap
+
 
 SEED = 1337
-DATA_ROOT = Path("data/wikitext103")
+DATA_ROOT = DEFAULT_DATA_ROOT
 
 
 def memmap(split: str) -> np.memmap:
-    return np.memmap(DATA_ROOT / f"{split}.bin", dtype=np.uint16, mode="r")
+    return token_memmap(split, root=DATA_ROOT)
 
 
 def windows(

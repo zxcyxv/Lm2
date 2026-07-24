@@ -9,6 +9,7 @@ from rotlm.training.ha_skew_window import (
     forward_sparse_clean_window,
     forward_sparse_multi_trajectory_compounding_noise_window,
     operator_orbit,
+    relative_mse_rows,
     sparse_compounding_noise_window_loss,
     sparse_clean_window_loss,
     sparse_multi_trajectory_compounding_noise_loss,
@@ -288,6 +289,45 @@ def test_multi_trajectory_ce_only_reaches_noise_and_k_but_not_mse_target():
     assert target_gradient is None
 
 
+def test_ce_only_objective_is_unchanged_by_inactive_h1_mse_options():
+    model = make_model()
+    model.sigma_predictor = RecordingSigmaPredictor(model.width)
+    window = torch.randint(0, 43, (2, 13))
+    baseline = sparse_multi_trajectory_compounding_noise_loss(
+        model,
+        window,
+        prefix_length=9,
+        horizons=4,
+        anchor_stride=3,
+        trajectories=3,
+        temperature=0.05,
+        mse_weight=0.0,
+        noise_generator=torch.Generator().manual_seed(911),
+    )
+    explicit_h1 = sparse_multi_trajectory_compounding_noise_loss(
+        model,
+        window,
+        prefix_length=9,
+        horizons=4,
+        anchor_stride=3,
+        trajectories=3,
+        temperature=0.05,
+        mse_weight=0.0,
+        mse_horizons=(1,),
+        detach_mse_targets=False,
+        noise_generator=torch.Generator().manual_seed(911),
+    )
+    torch.testing.assert_close(baseline[0], explicit_h1[0], rtol=0, atol=0)
+    torch.testing.assert_close(
+        baseline[3].sparse.logits,
+        explicit_h1[3].sparse.logits,
+        rtol=0,
+        atol=0,
+    )
+    assert baseline[3].trajectory_mse is None
+    assert explicit_h1[3].trajectory_mse is None
+
+
 def test_multi_trajectory_optional_mse_uses_same_responsibilities():
     model = make_model()
     model.sigma_predictor = RecordingSigmaPredictor(model.width)
@@ -315,6 +355,48 @@ def test_multi_trajectory_optional_mse_uses_same_responsibilities():
     )[0]
     assert torch.isfinite(target_gradient).all()
     assert target_gradient.norm() > 0
+
+
+def test_multi_trajectory_h1_mse_uses_online_attached_clean_state_only():
+    model = make_model()
+    model.sigma_predictor = RecordingSigmaPredictor(model.width)
+    window = torch.randint(0, 43, (2, 13))
+    loss, ce, mse, output = (
+        sparse_multi_trajectory_compounding_noise_loss(
+            model,
+            window,
+            prefix_length=9,
+            horizons=4,
+            anchor_stride=3,
+            trajectories=3,
+            temperature=0.05,
+            mse_weight=1.0,
+            mse_horizons=(1,),
+            detach_mse_targets=False,
+            noise_generator=torch.Generator().manual_seed(921),
+        )
+    )
+    expected = relative_mse_rows(
+        output.sparse.clean_states[:, :, 0],
+        output.sparse.gold_states[:, :, 0],
+    ).mean()
+    torch.testing.assert_close(loss, ce + mse)
+    torch.testing.assert_close(mse, expected)
+
+    target_gradient, sigma_gradient = torch.autograd.grad(
+        mse,
+        (
+            output.sparse.gold_states,
+            model.sigma_predictor.log_sigma,
+        ),
+        allow_unused=True,
+    )
+    assert target_gradient[:, :, 0].norm() > 0
+    assert torch.count_nonzero(target_gradient[:, :, 1:]) == 0
+    assert (
+        sigma_gradient is None
+        or torch.count_nonzero(sigma_gradient) == 0
+    )
 
 
 def test_shared_multi_trajectory_matches_expanded_prefix_reference():
