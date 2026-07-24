@@ -1,0 +1,11 @@
+intervention	max_abs	mean_relative_mse
+short_vs_joint_h1_hidden	0.0	0.0
+short_vs_joint_h1_logits	0.0	0.0
+change_s2_prefix_plus_h1_hidden	0.0	0.0
+change_s2_h1_logits	0.0	0.0
+change_s2_h2_hidden	25.08082389831543	0.9992461204528809
+change_s2_h2_logits	15.739965438842773	13.289880752563477
+change_s1_prefix_hidden	0.0	0.0
+change_s1_h1_hidden	23.977352142333984	0.9998904466629028
+change_s1_h2_hidden	0.045249857008457184	0.00211119931191206
+change_s1_h2_logits	0.6607961654663086	0.0005703981150873005

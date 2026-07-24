@@ -1,0 +1,5 @@
+gradient	l2_norm
+d_h1_probe_d_s1_norm	40.70903778076172
+d_h1_probe_d_s2_norm	0.0
+d_h2_probe_d_s1_norm	1.7980289459228516
+d_h2_probe_d_s2_norm	34.75379943847656

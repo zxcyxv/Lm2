@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lm2-latent-orbit"
+version = "0.1.0"
+description = "Reproducible MSE+CE latent-orbit language-model experiments"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "torch",
+]
+
+[project.optional-dependencies]
+data = [
+    "datasets",
+    "tokenizers",
+]
+test = [
+    "pytest>=7",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["mamba2", "protected_model", "shift_lm"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]
+addopts = "-q"
