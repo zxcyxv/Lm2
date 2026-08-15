@@ -1,0 +1,17 @@
+key	value
+experiment_id	EXP-20260803-byte256-unitary-fused-triton-scan-h16-10epoch-13m-rtx5090
+seed	1337
+split	wikitext103_bytes_train_validation
+steps	33570
+schedule_steps	33570
+effective_batch	64
+microbatch	64
+horizons	16
+anchor_stride	16
+central_rollout	time-varying-scan
+scan_backend	fused-triton-rotating-frame
+report_every	3357
+precision	strict_float32_no_tf32
+gpu	NVIDIA GeForce RTX 5090
+torch	2.8.0+cu128
+h1_feedback_max_logit_error	4.76837158203125e-06

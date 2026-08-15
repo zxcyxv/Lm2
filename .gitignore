@@ -15,9 +15,21 @@ data/wikitext103/*
 !data/wikitext103/train.bin.gz
 !data/wikitext103/validation.bin
 !data/wikitext103/test.bin
+!data/wikitext103_bytes/
+data/wikitext103_bytes/*
+!data/wikitext103_bytes/README.md
+!data/wikitext103_bytes/manifest.tsv
+!data/wikitext103_bytes/provenance.tsv
 outputs/
 *.pt
 *.pth
 
 experiments/records/**/smoke*/
 experiments/records/**/preflight-smoke/
+
+# 2026-08-15: 날짜별 작업 폴더, 낮은 차원 시절 계보, 코덱스 세션 백업
+20260813_new/
+20260814_new/
+trash/
+미확인/
+.claude/

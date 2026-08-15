@@ -1,0 +1,21 @@
+# 6000스텝 학습 로그 실시간 보기
+tail -f /tmp/claude-0/-workspace-Lm2/e54d4663-b6b2-449c-826b-2336543e672d/scratchpad/train_121m_6k.log
+
+# 진행 상황 요약 (반등 표시 포함)
+python3 -c "
+import csv
+n={int(r['step']):r for r in csv.DictReader(open('outputs/nobottleneck_121m_6k/metrics.tsv'),delimiter='\t')}
+print(f\"{'step':>5} | {'ce':>8} {'block_nll':>10} {'h1':>7} {'h16':>7} {'gnorm':>8} {'phase%':>7}\")
+p=None
+for s in sorted(n):
+    r=n[s]; ce=float(r['train_ce']); g=float(r['gradient_norm']); pg=float(r['phase_gradient_norm'])
+    m='*' if p and ce>p else ' '
+    print(f\"{s:>5} | {ce:8.4f}{m}{float(r['val_block_nll']):10.4f} {float(r['val_h1_nll']):7.4f} {float(r['val_h16_nll']):7.4f} {g:8.3f} {pg**2/g**2:7.1%}\")
+    p=ce
+print('* = CE 반등')
+print('기준: 1000스텝 결과 blk 3.1608 / 기존121M 3.1590 / 13M 3.0537')
+"
+
+# 프로세스 확인 / 중단
+ps -eo pid,etime,args | grep "steps 6000" | grep -v grep
+# pkill -f "steps 6000"

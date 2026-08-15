@@ -1,0 +1,5 @@
+key	value
+best_step	1000
+best_val_marginal_nll	5.69581238925457
+wall_s	564.3607444763184
+peak_vram_bytes	13222802944

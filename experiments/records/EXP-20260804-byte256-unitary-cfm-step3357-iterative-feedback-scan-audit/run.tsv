@@ -1,0 +1,14 @@
+key	value
+experiment_id	EXP-20260804-byte256-unitary-cfm-step3357-iterative-feedback-scan-audit
+seed	1337
+split	wikitext103_bytes_validation
+eval_examples	64
+labels_per_checkpoint	16384
+microbatch	4
+timing_examples	4
+timing_warmup	3
+timing_repeats	10
+scan_backend	fused-triton-rotating-frame
+precision	strict_float32_no_tf32
+gpu	NVIDIA RTX A4500
+torch	2.8.0+cu128

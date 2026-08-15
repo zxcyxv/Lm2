@@ -1,0 +1,429 @@
+Unitary Transition SSM과 재귀적 확장
+====================================
+
+1. 단일 레이어 정의
+=================
+
+입력 hidden을 다음과 같이 둔다.
+
+    x_t ∈ R^{d_model}
+
+Query, key, value projection은
+
+    q_t = (x_t W_Q) exp(i phi_q)
+    k_t = (x_t W_K) exp(i phi_k)
+    v_t = x_t W_V
+
+이다. 여기서
+
+    q_t, k_t ∈ C^d,
+    v_t ∈ R^{d_v}
+
+이며 phi_q와 phi_k는 복소 feature의 위상이다.
+
+현재 입력이 만드는 rank-one write를
+
+    W_t = k_t v_t^dagger
+
+로 둔다. 거시 memory state의 전이는
+
+    S_t = U S_{t-1} + W_t
+
+이다. 채널별 회전을 사용할 경우
+
+    U = exp(-i theta)
+
+로 쓸 수 있다.
+
+현재 query를 사용한 측정은
+
+    o_t = Re(q_t^dagger S_t)
+
+이다.
+
+
+2. Hamiltonian과 unitary transition
+===================================
+
+Hermitian Hamiltonian H에 대해
+
+    H = H^dagger
+
+이면 시간 전이 연산자를
+
+    U(tau) = exp(-i tau H)
+
+로 정의할 수 있다. 이때
+
+    U(tau)^dagger U(tau) = I
+
+이므로 U는 unitary다.
+
+외부 write가 없는 homogeneous transition
+
+    S_t = U S_{t-1}
+
+에서는 Frobenius norm이 보존된다.
+
+    ||S_t||_F
+      = ||U S_{t-1}||_F
+      = ||S_{t-1}||_F
+
+따라서 U는 기존 state를 감쇠하거나 증폭하지 않고 복소 공간에서 회전시킨다.
+
+전체 전이에는 additive write가 있으므로
+
+    S_t = U S_{t-1} + W_t
+
+이며, 이 경우 전체 state norm은 U뿐 아니라 S_{t-1}과 W_t 사이의 내적에도
+의존한다.
+
+    ||S_t||_F^2
+      = ||S_{t-1}||_F^2
+        + ||W_t||_F^2
+        + 2 Re <U S_{t-1}, W_t>_F
+
+
+3. 중첩 전개
+===========
+
+초기 state를 S_0 = 0으로 두면
+
+    S_t = sum_{n=1}^t U^{t-n} W_n
+
+이고,
+
+    W_n = k_n v_n^dagger
+
+이므로
+
+    S_t = sum_{n=1}^t U^{t-n} k_n v_n^dagger
+
+이다.
+
+즉 각 입력이 만든 rank-one write는 서로 다른 시간만큼 unitary하게 회전된 뒤
+하나의 state에 선형 중첩된다.
+
+입력열 x_1, ..., x_T가 모두 주어져 있으면 각 전이는 affine map
+
+    F_t(S) = U S + W_t
+
+이다. 두 전이의 합성은
+
+    F_b(F_a(S))
+      = U^2 S + U W_a + W_b
+
+이고 affine transition의 합성은 associative하다. 따라서 주어진 입력열에 대한
+state 계산은 parallel prefix scan으로 표현할 수 있다.
+
+
+4. 측정과 간섭
+=============
+
+state 전개를 측정식에 대입하면
+
+    o_t
+      = Re(q_t^dagger S_t)
+      = sum_{n=1}^t Re(q_t^dagger U^{t-n} k_n) v_n^dagger
+
+이다.
+
+각 과거 value v_n의 계수는
+
+    a_{t,n} = Re(q_t^dagger U^{t-n} k_n)
+
+이다. 스칼라 위상 표현에서는
+
+    a_{t,n}
+      = |q_t| |k_n|
+        cos(phi_q - phi_k - (t-n) theta)
+
+와 같은 형태가 된다.
+
+위상차에 따라 a_{t,n}의 부호와 크기가 달라진다.
+
+    위상 정렬:       cos(Delta phi) ≈ 1
+    반대 위상:       cos(Delta phi) ≈ -1
+    직교에 가까움:   cos(Delta phi) ≈ 0
+
+여러 항의 계수가 같은 부호로 정렬되면 합이 보강되고, 서로 다른 부호로 분포하면
+합이 상쇄된다.
+
+
+5. Hilbert 공간 해석의 범위
+==========================
+
+Key와 value 공간을
+
+    H_K ≅ C^{d_k},
+    H_V ≅ C^{d_v}
+
+로 두면
+
+    |k_t> ∈ H_K,
+    <v_t| ∈ H_V^*
+
+이고
+
+    S_t ∈ H_K tensor H_V^*
+
+로 볼 수 있다.
+
+다음 요소들은 양자역학의 수학적 형식과 대응한다.
+
+    복소 vector space       : Hilbert-space representation
+    exp(-i tau H)           : Hamiltonian-generated unitary evolution
+    sum U^{t-n} W_n         : linear superposition
+    q_t^dagger S_t          : projection-like measurement
+    복소 위상에 따른 합     : interference
+
+다만 일반적인
+
+    k_t v_t^dagger
+
+는 반드시 Hermitian이거나 positive semidefinite이거나 trace-one인 것은 아니다.
+따라서 추가 조건이 없다면 S_t를 물리학의 density matrix와 동일시할 필요는 없다.
+여기서의 대응은 복소 선형공간, unitary evolution, 중첩과 측정의 대수적 대응이다.
+
+
+6. 단일 레이어의 시간 변수
+=========================
+
+원래 식에서 t는 입력 sequence의 위치다.
+
+    x_1, x_2, ..., x_T
+
+각 x_t는 외부에서 주어진다. 레이어는 x_t로 W_t와 q_t를 계산하고 S_t와 o_t를
+출력한다.
+
+    (x_t, S_{t-1}) -> (o_t, S_t)
+
+이 식에는 o_t로 다음 입력 x_{t+1}을 만드는 규칙이 포함되어 있지 않다.
+
+
+7. 내부 latent 재귀를 위한 closure
+==================================
+
+외부의 다음 입력 없이 내부 latent를 반복하려면 reasoning index r과 latent z_r를
+별도로 정의해야 한다.
+
+    z_0, z_1, ..., z_H
+
+각 iteration에서 원래 SSM 연산을 적용하면
+
+    q_r = Q(z_r)
+    k_r = K(z_r)
+    v_r = V(z_r)
+
+    S_r = U S_{r-1} + k_r v_r^dagger
+
+    o_r = Re(q_r^dagger S_r)
+
+이다.
+
+다음 latent를 계산하려면 추가 함수 C가 필요하다.
+
+    z_{r+1} = C(z_r, o_r, S_r)
+
+C는 원래 단일 레이어 식에 포함되지 않은 재귀 closure다.
+
+이 closure를 추가하면 다음 write는
+
+    W_{r+1}
+      = K(z_{r+1}) V(z_{r+1})^dagger
+      = K(C(z_r,o_r,S_r)) V(C(z_r,o_r,S_r))^dagger
+
+가 된다. 따라서 z, measurement와 memory가 결합된 전체 system은 일반적으로
+비선형 재귀계다.
+
+
+8. 전체 재귀 Jacobian
+====================
+
+전체 recurrent state를
+
+    y_r = (z_r, S_{r-1})
+
+로 두면 한 iteration은
+
+    y_{r+1} = F(y_r)
+
+이고 Jacobian은
+
+              [ dz_{r+1}/dz_r       dz_{r+1}/dS_{r-1} ]
+    J_r =     [                                        ]
+              [ dS_r/dz_r            dS_r/dS_{r-1}     ]
+
+이다.
+
+memory에 대한 직접 미분에는 U가 포함된다.
+
+    dS_r/dS_{r-1} = U + indirect terms
+
+closure와 measurement의 정의에 따라 나머지 block 및 indirect term이 결정된다.
+
+H iteration을 통과하는 gradient에는
+
+    J_{H-1} J_{H-2} ... J_0
+
+가 포함된다. U의 unitary성은 U 자체의 singular value가 1임을 뜻하지만, 전체
+J_r 또는 그 곱의 singular value는 closure C와 Q/K/V/measurement의 미분에도
+의존한다.
+
+
+9. memory scale
+==============
+
+전개식은
+
+    S_r = sum_{n=1}^r U^{r-n} W_n
+
+이다.
+
+서로 회전된 write가 통계적으로 비상관이면 squared norm의 기대값은 대략
+
+    E ||S_r||_F^2
+      ≈ sum_{n=1}^r E ||W_n||_F^2
+      = O(r)
+
+이므로 전형적인 norm은
+
+    ||S_r||_F = O(sqrt(r))
+
+이다.
+
+모든 write가 같은 방향으로 정렬되는 경우에는
+
+    ||S_r||_F = O(r)
+
+까지 가능하다.
+
+분산 기준 좌표를 사용하려면
+
+    S_tilde_r = S_r / sqrt(r)
+
+로 둘 수 있다. 그러면
+
+    S_tilde_r
+      = sqrt((r-1)/r) U S_tilde_{r-1}
+        + W_r / sqrt(r)
+
+이다.
+
+동일한 결과는 raw S_r를 유지하고 측정 시
+
+    o_r = Re(q_r^dagger S_r) / sqrt(r)
+
+로 계산해도 얻을 수 있다.
+
+이 scaling은 비상관 write 합의 전형적인 forward variance를 일정하게 만드는
+변환이다. 전체 recurrent Jacobian에는 closure C의 미분이 추가로 포함된다.
+
+
+10. block-boundary residual closure 후보
+=======================================
+
+closure의 한 후보는
+
+    z_{r+1} = R z_r + alpha O(o_r)
+
+이다.
+
+여기서
+
+    R              : latent homogeneous transition
+    O              : measurement feature를 model hidden으로 보내는 projection
+    alpha          : measurement branch scale
+    alpha O(o_r)   : measurement에 의한 additive correction
+
+이다.
+
+원래 memory transition
+
+    S_r = U S_{r-1} + W_r
+
+와 residual closure는 모두 homogeneous term과 additive term의 합으로 표현된다.
+
+    memory:  previous carrier의 U transport + current write
+    latent:  previous carrier의 R transport + current measurement correction
+
+R이 unitary라면
+
+    R^dagger R = I
+
+이고 correction이 없는 homogeneous latent transition은 norm을 보존한다.
+
+closure Jacobian은
+
+    dz_{r+1}/dz_r
+      = R + alpha d[O(o_r)]/dz_r
+
+이다. 따라서 alpha는 measurement correction과 그 미분의 계수로 작용한다.
+
+
+11. 한 번의 write와 한 번의 measurement로 쓴 후보
+================================================
+
+원래 단일 레이어의 update-then-measure 순서를 reasoning iteration에 적용하면 다음과
+같다.
+
+    zbar_r = R z_r
+
+    zhat_r = N(zbar_r)
+
+    q_r = Q(zhat_r)
+    k_r = K(zhat_r)
+    v_r = V(zhat_r)
+
+    S_r = U S_{r-1} + k_r v_r^dagger
+
+    m_r = Re(q_r^dagger S_r) / sqrt(r+1)
+
+    delta_r = O(m_r)
+
+    z_{r+1} = zbar_r + alpha delta_r
+
+초기 memory를
+
+    S_{-1} = 0
+
+으로 두면 첫 iteration에서 z_0가 한 번 write된다.
+
+이 식에서는 한 iteration마다
+
+    Q/K/V projection 한 세트,
+    rank-one write 한 번,
+    updated-memory measurement 한 번,
+    output projection O 한 번,
+    latent residual update 한 번
+
+이 수행된다.
+
+decoder가 z_{r+1}을 읽고 다음 iteration도 z_{r+1}을 입력으로 사용하도록 정의하면
+
+    decoder state = recurrent successor = z_{r+1}
+
+이 된다.
+
+
+12. 단일 레이어와 재귀형의 수학적 차이
+======================================
+
+단일 레이어:
+
+    x_t는 외부 입력
+    W_t = W(x_t)
+    S_t는 주어진 W_t들에 대한 affine scan
+    o_t는 측정 출력
+
+재귀형:
+
+    z_{r+1} = C(z_r,o_r,S_r)
+    W_{r+1} = W(z_{r+1})
+    미래 write가 이전 state와 measurement에 의존
+    전체 (z,S) system은 일반적으로 nonlinear recurrence
+
+따라서 재귀형은 원래 local SSM 연산을 포함하지만, closure C가 추가된 새로운
+동역학이다. 원래 식으로부터 Q/K/V, unitary memory transition, rank-one
+superposition과 measurement는 직접 가져올 수 있다. 다음 latent를 만드는 규칙과
+그 반복 Jacobian은 별도로 정의된다.

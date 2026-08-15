@@ -1,0 +1,7 @@
+key	value
+margin_rows	16384.0
+non_tied_margin_rows	16384.0
+flip_classification_errors	0.0
+max_flip_identity_error	7.62939453125e-06
+gold_state_reencode_max_error	0.0
+canonical_gold_min_accuracy	1.0

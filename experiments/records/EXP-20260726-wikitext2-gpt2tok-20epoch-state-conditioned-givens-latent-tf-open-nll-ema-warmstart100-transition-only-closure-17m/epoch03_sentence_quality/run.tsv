@@ -1,0 +1,14 @@
+key	value
+split	validation
+seed	1337
+samples	8
+prompt_tokens	64
+new_tokens	64
+checkpoint_epoch	3
+checkpoint	outputs/experiments/EXP-20260726-wikitext2-gpt2tok-20epoch-state-conditioned-givens-latent-tf-open-nll-ema-warmstart100-transition-only-closure-17m/best.pt
+checkpoint_sha256	596a9a40281a947d38e7b613b72bcdc08effce8ac8a3e5c89b54678b9229dbc4
+grassmann_epoch	2
+grassmann_checkpoint	outputs/experiments/EXP-20260725-wikitext2-gpt2tok-epoch2-snapshot-schedule20-grassmann-v4-upstream-17m/grassmann_best.pt
+grassmann_checkpoint_sha256	7a07e5438ff2d97278e7367bce8c875ba46c6cef32410a2baee988ac9da9f8cd
+device	cuda
+central_token_conditioning	none

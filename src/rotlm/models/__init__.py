@@ -1,22 +1,63 @@
-from .iresnet_spectral import (
-    IResNetSoftSpectralNorm,
-    apply_iresnet_soft_spectral_norm,
-    exact_effective_spectral_norms,
-    iter_iresnet_spectral_layers,
-    update_iresnet_power_vectors,
-)
 from .k1_decoder_ablation import K1DecoderAblationLM
-from .prefix_orbit_lm import PrefixOrbitLM
-from .query_k1_inverse import QueryK1InverseLM, QueryK1InverseOutput
+from .complex_self_prediction import (
+    ComplexForcingVelocityTape,
+    ComplexMemoryState,
+    ComplexSelfPredictedKVTransition,
+    ComplexSelfPredictionRollout,
+    ComplexSelfPredictionStep,
+)
+from .latent_flow_matching import (
+    ConditionalRayFlowTimeConditioner,
+    SphericalFlowBridge,
+    conditional_ray_flow_velocity,
+    conditional_tangent_source,
+    from_rotating_frame_rays,
+    integrate_conditional_ray_flow,
+    shortest_spherical_bridge,
+    sphere_expmap,
+    to_rotating_frame_rays,
+)
+from .prefix_orthogonal_scan import (
+    PrefixConditionedOrthogonalAffineScan,
+    PrefixOrthogonalScanOutput,
+)
+from .spectral_rotation import SpectralRotationOperator
+from .spectral_collapse import (
+    InputConditionedSpectralCollapse,
+    SpectralCollapseOutput,
+)
+from .spectral_corrector import (
+    AttachedSpectralStateCorrector,
+    DetachedSpectralStateCorrector,
+    SpectralStateCorrector,
+    SpectralCorrectorOutput,
+)
+from .token_conditioned_transition import TokenConditionedTransition
 
 __all__ = [
-    "IResNetSoftSpectralNorm",
     "K1DecoderAblationLM",
-    "PrefixOrbitLM",
-    "QueryK1InverseLM",
-    "QueryK1InverseOutput",
-    "apply_iresnet_soft_spectral_norm",
-    "exact_effective_spectral_norms",
-    "iter_iresnet_spectral_layers",
-    "update_iresnet_power_vectors",
+    "TokenConditionedTransition",
+    "ComplexForcingVelocityTape",
+    "ComplexMemoryState",
+    "ComplexSelfPredictedKVTransition",
+    "ComplexSelfPredictionRollout",
+    "ComplexSelfPredictionStep",
+    "ConditionalRayFlowTimeConditioner",
+    "SphericalFlowBridge",
+    "PrefixConditionedOrthogonalAffineScan",
+    "PrefixOrthogonalScanOutput",
+    "SpectralRotationOperator",
+    "InputConditionedSpectralCollapse",
+    "SpectralCollapseOutput",
+    "AttachedSpectralStateCorrector",
+    "DetachedSpectralStateCorrector",
+    "SpectralStateCorrector",
+    "SpectralCorrectorOutput",
+    "conditional_ray_flow_velocity",
+    "conditional_tangent_source",
+    "from_rotating_frame_rays",
+    "integrate_conditional_ray_flow",
+    "shortest_spherical_bridge",
+    "sphere_expmap",
+    "to_rotating_frame_rays",
 ]

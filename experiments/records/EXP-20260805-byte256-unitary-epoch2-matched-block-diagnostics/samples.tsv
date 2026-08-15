@@ -1,0 +1,37 @@
+sample	validation_start	anchor	mode	prompt_suffix_escaped	gold_16_escaped	generated_16_escaped
+0	342139	240	h1_greedy_block1	 clashes with the Japanese occurred along the Matanikau River from 23 \u2013 27 September and 6 \u2013	 9 October . \n\n 	 1 . The second 
+1	1033517	240	h1_greedy_block1	Bono was embarrassed by his lack of familiarity with the genre , as most of U2 's musical knowle	dge began with p	dge of the seaso
+2	849441	240	h1_greedy_block1	ver 700 prisoners for the loss of 31 killed and 36 wounded . Later , Australian troops assisted 	in pushing the T	by the season , 
+3	345888	240	h1_greedy_block1	 north on a two @-@ lane undivided road . From the southern terminus , a ramp provides access to	 and from the so	 the state , and
+4	968891	240	h1_greedy_block1	de an enclosed fort unnecessary . The soldiers concentrated on building structures for lodging t	he men , animals	he season , and 
+5	879900	240	h1_greedy_block1	s were murdered by members of the Malayan Communist Party ( MCP ) . Australian involvement began	 in June 1950 , 	 to the season ,
+6	930058	240	h1_greedy_block1	ion ( 1988 ) , co @-@ authored by Jim Vander Wall , describes what the authors claim was a secre	t war against th	t for the season
+7	486778	240	h1_greedy_block1	ic news , has taken an at least partially supportive stance towards Scientology in relation to G	ermany . Richard	ermany . The sta
+8	529061	240	h1_greedy_block1	 He recommended passage of a law to set uniform school textbook prices , a reform both he and Go	ebel had advocat	d and the season
+9	576132	240	h1_greedy_block1	"son Lockwood , William Martin Scott , Fernand "" Fred "" Bonsor capt . , Frank Evershed , Donald """	" Don "" Jowett , "	" Stephen Stand """
+10	829323	240	h1_greedy_block1	e subsequently set aside by the British War Office and each of the six colonial governments sent	 separate contin	 to the state . 
+11	229330	240	h1_greedy_block1	and defeated the Pac @-@ 12 favorite UCLA Bruins 79 \u2013 63 . Tim Hardaway , Jr. was named the Bi	g Ten Player of 	llboard Hot 100 
+0	342139	240	h4_greedy_block4	 clashes with the Japanese occurred along the Matanikau River from 23 \u2013 27 September and 6 \u2013	 9 October . \n\n 	 1  .   a   a   
+1	1033517	240	h4_greedy_block4	Bono was embarrassed by his lack of familiarity with the genre , as most of U2 's musical knowle	dge began with p	dge o   a   a   
+2	849441	240	h4_greedy_block4	ver 700 prisoners for the loss of 31 killed and 36 wounded . Later , Australian troops assisted 	in pushing the T	tn the  ai  to  
+3	345888	240	h4_greedy_block4	 north on a two @-@ lane undivided road . From the southern terminus , a ramp provides access to	 and from the so	 the song . Th  
+4	968891	240	h4_greedy_block4	de an enclosed fort unnecessary . The soldiers concentrated on building structures for lodging t	he men , animals	oe  ao  te  t-  
+5	879900	240	h4_greedy_block4	s were murdered by members of the Malayan Communist Party ( MCP ) . Australian involvement began	 in June 1950 , 	 to the sort of 
+6	930058	240	h4_greedy_block4	ion ( 1988 ) , co @-@ authored by Jim Vander Wall , describes what the authors claim was a secre	t war against th	t r t   a   t   
+7	486778	240	h4_greedy_block4	ic news , has taken an at least partially supportive stance towards Scientology in relation to G	ermany . Richard	ereal  on  rece 
+8	529061	240	h4_greedy_block4	 He recommended passage of a law to set uniform school textbook prices , a reform both he and Go	ebel had advocat	vdrnye  .o  ,h  
+9	576132	240	h4_greedy_block4	"son Lockwood , William Martin Scott , Fernand "" Fred "" Bonsor capt . , Frank Evershed , Donald """	" Don "" Jowett , "	 ,  a   ao  te@ 
+10	829323	240	h4_greedy_block4	e subsequently set aside by the British War Office and each of the six colonial governments sent	 separate contin	 to the sort os 
+11	229330	240	h4_greedy_block4	and defeated the Pac @-@ 12 favorite UCLA Bruins 79 \u2013 63 . Tim Hardaway , Jr. was named the Bi	g Ten Player of 	llboard Hot 100 
+0	342139	240	scan_greedy_block16	 clashes with the Japanese occurred along the Matanikau River from 23 \u2013 27 September and 6 \u2013	 9 October . \n\n 	 0 .            
+1	1033517	240	scan_greedy_block16	Bono was embarrassed by his lack of familiarity with the genre , as most of U2 's musical knowle	dge began with p	dge             
+2	849441	240	scan_greedy_block16	ver 700 prisoners for the loss of 31 killed and 36 wounded . Later , Australian troops assisted 	in pushing the T	tn   e          
+3	345888	240	scan_greedy_block16	 north on a two @-@ lane undivided road . From the southern terminus , a ramp provides access to	 and from the so	 tee e          
+4	968891	240	scan_greedy_block16	de an enclosed fort unnecessary . The soldiers concentrated on building structures for lodging t	he men , animals	oe  e           
+5	879900	240	scan_greedy_block16	s were murdered by members of the Malayan Communist Party ( MCP ) . Australian involvement began	 in June 1950 , 	 an             
+6	930058	240	scan_greedy_block16	ion ( 1988 ) , co @-@ authored by Jim Vander Wall , describes what the authors claim was a secre	t war against th	t iy            
+7	486778	240	scan_greedy_block16	ic news , has taken an at least partially supportive stance towards Scientology in relation to G	ermany . Richard	ooe             
+8	529061	240	scan_greedy_block16	 He recommended passage of a law to set uniform school textbook prices , a reform both he and Go	ebel had advocat	ld n            
+9	576132	240	scan_greedy_block16	"son Lockwood , William Martin Scott , Fernand "" Fred "" Bonsor capt . , Frank Evershed , Donald """	" Don "" Jowett , "	 ,              
+10	829323	240	scan_greedy_block16	e subsequently set aside by the British War Office and each of the six colonial governments sent	 separate contin	 ae             
+11	229330	240	scan_greedy_block16	and defeated the Pac @-@ 12 favorite UCLA Bruins 79 \u2013 63 . Tim Hardaway , Jr. was named the Bi	g Ten Player of 	llo a           

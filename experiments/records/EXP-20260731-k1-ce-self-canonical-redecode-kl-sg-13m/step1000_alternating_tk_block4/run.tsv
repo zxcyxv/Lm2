@@ -1,0 +1,12 @@
+key	value
+checkpoint	outputs/experiments/EXP-20260731-k1-ce-self-canonical-redecode-kl-sg-13m/step1000.pt
+checkpoint_step	1000
+checkpoint_sha256	279561b31a94dea8d5d54bbaaaf3a8b139c8c288ae6e6ee492cc375317dfa27d
+validation_starts_sha256	7dfbbbe6d3c4393b13459a4db116bbca9e429a5544e596c4035f7a140987e1e0
+validation_sequences	128
+microbatch	4
+selection	greedy
+gold_boundary_interval	4
+recurrence	K_then_T_repeated_four_times
+parameter_updates	0
+test_split_read	false

@@ -1,0 +1,2 @@
+reference_loss	candidate_loss	loss_abs_difference	gradient_tensors_compared	reference_gradient_norm	candidate_gradient_norm	gradient_cosine	gradient_relative_l2_error	gradient_max_abs_error
+2.9964005947113037	2.9964005947113037	0.0	22	2.6403389955894685	2.6401544570361497	0.999982493515	0.005917381833665535	0.00042724609375

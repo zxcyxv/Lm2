@@ -4,7 +4,7 @@ from __future__ import annotations
 from typing import Any
 
 
-__all__ = ["K1DecoderAblationLM", "PrefixOrbitLM"]
+__all__ = ["K1DecoderAblationLM"]
 
 
 def __getattr__(name: str) -> Any:
@@ -14,8 +14,4 @@ def __getattr__(name: str) -> Any:
         from .models.k1_decoder_ablation import K1DecoderAblationLM
 
         return K1DecoderAblationLM
-    if name == "PrefixOrbitLM":
-        from .models.prefix_orbit_lm import PrefixOrbitLM
-
-        return PrefixOrbitLM
     raise AttributeError(name)

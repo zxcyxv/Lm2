@@ -1,0 +1,27 @@
+key	value
+experiment_id	EXP-20260804-byte256-unitary-conditional-ray-cfm-h16-10epoch-13m
+seed	1337
+flow_noise_seed	25617
+split	wikitext103_bytes_train_validation
+steps	33570
+schedule_steps	33570
+effective_batch	64
+microbatch	64
+parameter_count	13217696
+trainable_parameter_count	12872288
+horizons	16
+ce_anchor_stride	16
+flow_anchor_stride	64
+flow_noise_scale	0.8
+flow_weight	0.1
+flow_integration_steps	8
+flow_geometry	shortest_sphere_slerp
+flow_source	independent_equal_rms_tangent_gaussian
+central_rollout	time-varying-scan
+scan_backend	fused-triton-rotating-frame
+report_every	3357
+checkpoint_every	3357
+precision	strict_float32_no_tf32
+gpu	NVIDIA RTX A4500
+torch	2.8.0+cu128
+h1_feedback_max_logit_error	3.814697265625e-06

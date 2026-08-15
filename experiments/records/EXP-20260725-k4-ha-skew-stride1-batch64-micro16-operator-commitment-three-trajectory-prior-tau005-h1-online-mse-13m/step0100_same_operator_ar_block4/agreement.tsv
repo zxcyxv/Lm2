@@ -1,0 +1,3 @@
+scope	token_agreement	h1_agreement	h2_agreement	h3_agreement	h4_agreement	exact_sequence_agreement
+same_prefix_one_block	0.7109375	1.0	0.546875	0.640625	0.65625	0.359375
+free_running_64_tokens	0.70849609375	0.7294921875	0.6982421875	0.703125	0.703125	0.34375

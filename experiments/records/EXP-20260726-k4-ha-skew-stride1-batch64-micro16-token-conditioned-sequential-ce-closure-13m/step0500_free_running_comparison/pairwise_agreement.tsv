@@ -1,0 +1,6 @@
+first	second	positions	token_agreement
+sequential_recurrent_greedy	sequential_reanchored_greedy	p1	1.0
+sequential_recurrent_greedy	sequential_reanchored_greedy	p2_4	0.609375
+sequential_recurrent_greedy	sequential_reanchored_greedy	p5_16	0.08984375
+sequential_recurrent_greedy	sequential_reanchored_greedy	p17_64	0.0768229141831398
+sequential_recurrent_greedy	sequential_reanchored_greedy	all	0.11865234375

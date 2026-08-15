@@ -1,0 +1,7 @@
+key	value
+best_nll_step	1000
+best_val_token_nll	6.173245310783386
+best_kl_step	100
+best_val_corrected_teacher_kl	0.06871512462384999
+wall_s	1540.3709864616394
+peak_vram_bytes	4114457088

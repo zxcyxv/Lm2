@@ -1,0 +1,10 @@
+key	value
+source	Salesforce/wikitext
+configuration	wikitext-103-raw-v1
+datasets_version	5.0.1
+encoding	literal_utf8_bytes_0_through_255
+text_join	skip_empty_then_append_newline
+train_byte_limit	55000000
+test_split	not_materialized
+train_dataset_fingerprint	7dabb830ac9ebb0d
+validation_dataset_fingerprint	ea37ea707fafbf9f

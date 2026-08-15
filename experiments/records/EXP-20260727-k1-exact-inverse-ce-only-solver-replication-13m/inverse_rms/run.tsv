@@ -1,0 +1,13 @@
+key	value
+variant	inverse_rms
+seed	1337
+steps	1000
+batch	128
+context	256
+parameters	12966912
+trainable_parameters	12966912
+precision	float32_tf32_matmul
+initial_nll	16.455768585205078
+initial_k_gradient_norm	115.64389038085938
+head_self_retrieval	1.0
+inverse_roundtrip_rel_l2	6.489391125796828e-06

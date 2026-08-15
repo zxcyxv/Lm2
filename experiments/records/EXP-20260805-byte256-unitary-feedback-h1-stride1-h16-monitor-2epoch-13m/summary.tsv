@@ -1,0 +1,15 @@
+key	value
+final_step	6714
+mechanism_criterion_passed	true
+h1_nll_improved	true
+h2_h4_token_agreement_threshold	true
+mean_ar_state_cosine_threshold	true
+h1_path_tolerance	true
+posterior_prior_readouts_distinct	true
+epoch_one_row_present	true
+all_reported_losses_and_gradients_finite	true
+supervised_h1_nll_improved	true
+h16_monitor_block_nll_improved_from_initialization	true
+heldout_h2_h16_mean_nll_improved_epoch1_to_epoch2	true
+wall_s	845.776962518692
+peak_vram_bytes	8387807744

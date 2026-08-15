@@ -1,0 +1,10 @@
+"""RTX 5090 end-to-end ETA run for the selected sequential H16 trainer."""
+import train_byte256_complex_self_predicted_kv_unitary_branch_normalized_residual_h16_attached_stride16_ce_only_13m as run
+
+
+run.base.FUSE_BRANCH_MEMORY_KERNEL = False
+run.base.REPORT_STEPS = frozenset((200,))
+
+
+if __name__ == "__main__":
+    run.base.main()

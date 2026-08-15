@@ -1,0 +1,12 @@
+key	value
+final_step	6000
+strict_absolute_criterion_passed	false
+continuation_trend_criterion_passed	false
+continuation_h1_nll_nonworse	true
+continuation_h1_quantization_cosine_increased	true
+continuation_mean_quantization_cosine_increased	true
+continuation_mean_ar_state_cosine_increased	false
+continuation_h2_h4_token_agreement_increased	false
+continuation_decoder_norm_error_bounded	false
+wall_s	4256.185255527496
+peak_vram_bytes	2260898304

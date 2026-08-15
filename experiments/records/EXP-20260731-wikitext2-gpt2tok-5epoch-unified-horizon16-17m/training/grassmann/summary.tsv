@@ -1,0 +1,9 @@
+key	value
+completed_epochs	5
+last_val_nll	6.022627802833992
+last_val_ppl	412.6615654191501
+best_val_nll	6.022627802833992
+best_val_ppl	412.6615654191501
+test_evaluation	skipped
+wall_s	1358.733303785324
+peak_vram_bytes	11332551168

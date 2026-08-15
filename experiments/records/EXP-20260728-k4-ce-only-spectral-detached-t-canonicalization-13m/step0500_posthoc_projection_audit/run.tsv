@@ -1,0 +1,11 @@
+key	value
+checkpoint	outputs/experiments/EXP-20260728-k4-ce-only-spectral-detached-t-canonicalization-13m/step0500.pt
+checkpoint_step	500
+checkpoint_sha256	b7b679d98ef0ca4b32d8a33578ecc5e8e76cd889ca4706ff3510d96666956742
+validation_starts_sha256	2cbb42d154272639d91928f262187fd6d3bcf52bf294c728b6b884e0bc7cb025
+validation_sequences	128
+microbatch	4
+comparison	same_checkpoint_alpha0_vs_alpha1_inference
+parameter_updates	0
+t_corrector_used	false
+test_split_read	false

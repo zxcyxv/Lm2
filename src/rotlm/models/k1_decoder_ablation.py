@@ -20,6 +20,7 @@ from typing import Literal
 
 import torch
 from torch import nn
+import torch.nn.functional as F
 
 from shift_lm import RevBlock
 
@@ -28,7 +29,12 @@ from .prefix_orbit_lm import PrefixOrbitLM
 
 
 DecoderMode = Literal["exact-inverse", "independent"]
-HeadMode = Literal["cosine", "rms-tied"]
+HeadMode = Literal[
+    "cosine",
+    "rms-tied",
+    "simplex-tied",
+    "simplex-raw-tied",
+]
 
 
 class K1DecoderAblationLM(nn.Module):
@@ -44,6 +50,7 @@ class K1DecoderAblationLM(nn.Module):
         independent_decoder_blocks: int = 2,
         head_mode: HeadMode = "cosine",
         trainable_cosine_scale: bool = True,
+        simplex_logit_scale: float = 16.0,
     ) -> None:
         super().__init__()
         if width <= 0 or width % 16:
@@ -52,8 +59,21 @@ class K1DecoderAblationLM(nn.Module):
             raise ValueError("encoder_blocks must be positive")
         if decoder_mode not in ("exact-inverse", "independent"):
             raise ValueError(f"unknown decoder_mode: {decoder_mode}")
-        if head_mode not in ("cosine", "rms-tied"):
+        if head_mode not in (
+            "cosine",
+            "rms-tied",
+            "simplex-tied",
+            "simplex-raw-tied",
+        ):
             raise ValueError(f"unknown head_mode: {head_mode}")
+        if simplex_logit_scale <= 0:
+            raise ValueError("simplex logit scale must be positive")
+        if head_mode in ("simplex-tied", "simplex-raw-tied") and (
+            width < vocabulary
+        ):
+            raise ValueError(
+                "simplex-tied head requires width >= vocabulary"
+            )
         if decoder_mode == "independent" and independent_decoder_blocks < 1:
             raise ValueError("independent_decoder_blocks must be positive")
 
@@ -87,6 +107,27 @@ class K1DecoderAblationLM(nn.Module):
             self.encoder.head_norm.requires_grad_(False)
         else:
             self.codebook_head = None
+            if head_mode in ("simplex-tied", "simplex-raw-tied"):
+                # V equal-norm vertices with pairwise inner product
+                # -1/(V-1), embedded in the first V coordinates. This makes
+                # normalized dot-product argmax a nearest-code decision.
+                identity = torch.eye(vocabulary)
+                simplex = identity - torch.full(
+                    (vocabulary, vocabulary),
+                    1.0 / vocabulary,
+                )
+                simplex *= (vocabulary / (vocabulary - 1)) ** 0.5
+                with torch.no_grad():
+                    self.encoder.embed.weight.zero_()
+                    self.encoder.embed.weight[:, :vocabulary].copy_(
+                        simplex
+                    )
+                self.encoder.embed.weight.requires_grad_(False)
+                self.encoder.head_norm.requires_grad_(False)
+                self.register_buffer(
+                    "simplex_logit_scale_value",
+                    torch.tensor(float(simplex_logit_scale)),
+                )
 
     @property
     def embedding_weight(self) -> torch.Tensor:
@@ -102,6 +143,108 @@ class K1DecoderAblationLM(nn.Module):
         if positions is None:
             positions = torch.arange(tokens.shape[1], device=tokens.device)
         return self.encoder.encode(tokens, positions)
+
+    def dense_action_encode(
+        self,
+        prefix_tokens: torch.Tensor,
+        action_tokens: torch.Tensor,
+        positions: torch.Tensor | None = None,
+    ) -> torch.Tensor:
+        """Encode one hard action behind every literal causal prefix.
+
+        ``action_tokens[:, t]`` is contextualized as the next token after
+        ``prefix_tokens[:, :t+1]``. Branches for different anchors are
+        independent, so the result is exactly the stack of literal
+        ``encode([prefix[:t+1], action[t]])[:, -1]`` calls.
+        """
+        if prefix_tokens.ndim != 2:
+            raise ValueError("prefix_tokens must have shape [batch,length]")
+        if action_tokens.shape != prefix_tokens.shape:
+            raise ValueError(
+                "action_tokens must match prefix_tokens shape, got "
+                f"{tuple(action_tokens.shape)} and {tuple(prefix_tokens.shape)}"
+            )
+        return self.dense_action_tape_encode(
+            prefix_tokens,
+            action_tokens.unsqueeze(-1),
+            positions,
+        ).squeeze(2)
+
+    def dense_action_tape_encode(
+        self,
+        prefix_tokens: torch.Tensor,
+        action_tokens: torch.Tensor,
+        positions: torch.Tensor | None = None,
+    ) -> torch.Tensor:
+        """Encode one causal hard-action tape behind every literal prefix.
+
+        ``action_tokens[:, t, :j+1]`` is contextualized behind
+        ``prefix_tokens[:, :t+1]``. The returned state at ``[b,t,j]`` is
+        exactly the last encoder state of that literal concatenated tape.
+        Different anchors remain causally independent.
+        """
+        if prefix_tokens.ndim != 2:
+            raise ValueError("prefix_tokens must have shape [batch,length]")
+        if action_tokens.ndim != 3 or (
+            action_tokens.shape[:2] != prefix_tokens.shape
+        ):
+            raise ValueError(
+                "action_tokens must have shape [batch,length,horizon]"
+            )
+        batch, length = prefix_tokens.shape
+        if positions is None:
+            positions = torch.arange(length, device=prefix_tokens.device)
+        if positions.ndim == 1:
+            positions = positions.unsqueeze(0).expand(batch, -1)
+        if positions.shape != prefix_tokens.shape:
+            raise ValueError("positions must match prefix token shape")
+
+        prefix = self.encoder.embed(prefix_tokens)
+        branch = self.encoder.embed(action_tokens)
+        horizons = action_tokens.shape[2]
+        branch_positions = positions.unsqueeze(-1) + torch.arange(
+            1,
+            horizons + 1,
+            device=positions.device,
+            dtype=positions.dtype,
+        ).view(1, 1, -1)
+        prefix_first, prefix_second = prefix.chunk(2, dim=-1)
+        branch_first, branch_second = branch.chunk(2, dim=-1)
+        for block in self.encoder.blocks:
+            attn_scale = getattr(block, "attn_scale", None)
+            ffn_scale = getattr(block, "ffn_scale", None)
+            if attn_scale is None:
+                attn_scale = block.residual_scale
+            if ffn_scale is None:
+                ffn_scale = block.residual_scale
+            prefix_attention, branch_attention = PrefixOrbitLM._branch_attention(
+                block.attn,
+                block.norm1(prefix_second),
+                block.norm1(branch_second),
+                positions,
+                branch_positions,
+            )
+            next_prefix_first = (
+                prefix_first + attn_scale * prefix_attention
+            )
+            next_branch_first = (
+                branch_first + attn_scale * branch_attention
+            )
+            next_prefix_second = prefix_second + ffn_scale * block.ffn(
+                block.norm2(next_prefix_first)
+            )
+            next_branch_second = branch_second + ffn_scale * block.ffn(
+                block.norm2(next_branch_first)
+            )
+            prefix_first, prefix_second = (
+                next_prefix_first,
+                next_prefix_second,
+            )
+            branch_first, branch_second = (
+                next_branch_first,
+                next_branch_second,
+            )
+        return torch.cat((branch_first, branch_second), dim=-1)
 
     @staticmethod
     def _positions_for_branches(
@@ -453,6 +596,15 @@ class K1DecoderAblationLM(nn.Module):
     def token_logits(self, hidden: torch.Tensor) -> torch.Tensor:
         if self.codebook_head is not None:
             return self.codebook_head(hidden, self.embedding_weight)
+        if self.head_mode == "simplex-tied":
+            query = F.normalize(hidden.float(), dim=-1, eps=1e-6)
+            return self.simplex_logit_scale_value * (
+                query @ self.embedding_weight.float().T
+            )
+        if self.head_mode == "simplex-raw-tied":
+            return self.simplex_logit_scale_value * (
+                hidden.float() @ self.embedding_weight.float().T
+            )
         return self.encoder.head_norm(hidden) @ self.embedding_weight.T
 
     def forward(

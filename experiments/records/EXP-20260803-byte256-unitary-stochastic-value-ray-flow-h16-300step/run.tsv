@@ -1,0 +1,18 @@
+key	value
+experiment_id	EXP-20260803-byte256-unitary-stochastic-value-ray-flow-h16-300step
+parent_checkpoint	outputs/experiments/EXP-20260803-byte256-unitary-fused-triton-scan-h16-10epoch-13m-rtx5090/step33570.pt
+seed	1337
+data_seed	1337
+noise_seed	25617
+steps	300
+batch	64
+horizons	16
+anchor_stride	16
+diffusion_rate	0.2
+delta_tau	0.0625
+value_noise_scale	0.05
+ray_flow_weight	0.01
+ray_flow_horizons	4
+learning_rate	3e-05
+gpu	NVIDIA GeForce RTX 5090
+torch	2.8.0+cu128

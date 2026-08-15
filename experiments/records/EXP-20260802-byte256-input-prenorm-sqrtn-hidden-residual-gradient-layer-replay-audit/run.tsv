@@ -1,0 +1,7 @@
+key	value
+source_experiment	EXP-20260802-byte256-complex-self-predicted-kv-input-prenorm-sqrtn-hidden-residual-h16-ce-only-attached-stride16-13m
+seed	1337
+batch	64
+microbatch	16
+target_steps	1,50,100,200,300
+preflight_initial_loss	6.694538116455078

@@ -1,0 +1,55 @@
+envelope	envelope_kind	source_horizons	interval_index	start_epoch	end_epoch	envelope_value
+block_signed_mean	observed_signed_improvement	H1-H16 mean; target included	1	1	2	0.041570936706703421
+block_signed_mean	observed_signed_improvement	H1-H16 mean; target included	2	2	3	0.024319942557655683
+block_signed_mean	observed_signed_improvement	H1-H16 mean; target included	3	3	4	0.014227685377536936
+block_signed_mean	observed_signed_improvement	H1-H16 mean; target included	4	4	5	0.0085190354606572427
+block_signed_mean	observed_signed_improvement	H1-H16 mean; target included	5	5	6	0.0096532664947965863
+block_signed_mean	observed_signed_improvement	H1-H16 mean; target included	6	6	7	0.005975840277109512
+block_signed_mean	observed_signed_improvement	H1-H16 mean; target included	7	7	8	0.0092168180436136282
+block_signed_mean	observed_signed_improvement	H1-H16 mean; target included	8	8	9	0.0037245299336019499
+block_signed_mean	observed_signed_improvement	H1-H16 mean; target included	9	9	10	0.0021453789788106192
+shallow_h1_h4_mean	observed_signed_improvement	H1-H4 mean	1	1	2	0.095079836115112615
+shallow_h1_h4_mean	observed_signed_improvement	H1-H4 mean	2	2	3	0.068893530366005096
+shallow_h1_h4_mean	observed_signed_improvement	H1-H4 mean	3	3	4	0.032799575924500668
+shallow_h1_h4_mean	observed_signed_improvement	H1-H4 mean	4	4	5	0.024396504426683341
+shallow_h1_h4_mean	observed_signed_improvement	H1-H4 mean	5	5	6	0.016889971851322405
+shallow_h1_h4_mean	observed_signed_improvement	H1-H4 mean	6	6	7	0.020507123290343265
+shallow_h1_h4_mean	observed_signed_improvement	H1-H4 mean	7	7	8	0.02321062287175174
+shallow_h1_h4_mean	observed_signed_improvement	H1-H4 mean	8	8	9	0.0075188174292240006
+shallow_h1_h4_mean	observed_signed_improvement	H1-H4 mean	9	9	10	0.0022966211308418916
+shallow_h1_h4_median	observed_signed_improvement	H1-H4 median	1	1	2	0.096759386984858864
+shallow_h1_h4_median	observed_signed_improvement	H1-H4 median	2	2	3	0.063657568473578507
+shallow_h1_h4_median	observed_signed_improvement	H1-H4 median	3	3	4	0.027559420585520966
+shallow_h1_h4_median	observed_signed_improvement	H1-H4 median	4	4	5	0.020693892168201167
+shallow_h1_h4_median	observed_signed_improvement	H1-H4 median	5	5	6	0.017463489530167631
+shallow_h1_h4_median	observed_signed_improvement	H1-H4 median	6	6	7	0.020854332219819027
+shallow_h1_h4_median	observed_signed_improvement	H1-H4 median	7	7	8	0.024618075516463112
+shallow_h1_h4_median	observed_signed_improvement	H1-H4 median	8	8	9	0.0094008817670800937
+shallow_h1_h4_median	observed_signed_improvement	H1-H4 median	9	9	10	0.0016727527245237184
+all_horizon_median	observed_signed_improvement	H1-H16 median	1	1	2	0.023271377824130468
+all_horizon_median	observed_signed_improvement	H1-H16 median	2	2	3	0.010821736374055035
+all_horizon_median	observed_signed_improvement	H1-H16 median	3	3	4	0.0076293227612040937
+all_horizon_median	observed_signed_improvement	H1-H16 median	4	4	5	0.0045600565572385676
+all_horizon_median	observed_signed_improvement	H1-H16 median	5	5	6	0.0099800346883966995
+all_horizon_median	observed_signed_improvement	H1-H16 median	6	6	7	0.001569757194374688
+all_horizon_median	observed_signed_improvement	H1-H16 median	7	7	8	0.0051144377584932954
+all_horizon_median	observed_signed_improvement	H1-H16 median	8	8	9	0.0020910109003580146
+all_horizon_median	observed_signed_improvement	H1-H16 median	9	9	10	0.0018542052294900913
+cosine_lr_fraction_of_peak	registered_schedule_exposure	no horizon NLL; average LR / peak LR	1	1	2	0.95091615376999561
+cosine_lr_fraction_of_peak	registered_schedule_exposure	no horizon NLL; average LR / peak LR	2	2	3	0.869120982537952
+cosine_lr_fraction_of_peak	registered_schedule_exposure	no horizon NLL; average LR / peak LR	3	3	4	0.7559026350828939
+cosine_lr_fraction_of_peak	registered_schedule_exposure	no horizon NLL; average LR / peak LR	4	4	5	0.62240948546491837
+cosine_lr_fraction_of_peak	registered_schedule_exposure	no horizon NLL; average LR / peak LR	5	5	6	0.48178632514101449
+cosine_lr_fraction_of_peak	registered_schedule_exposure	no horizon NLL; average LR / peak LR	6	6	7	0.34788002282145203
+cosine_lr_fraction_of_peak	registered_schedule_exposure	no horizon NLL; average LR / peak LR	7	7	8	0.23387605224630201
+cosine_lr_fraction_of_peak	registered_schedule_exposure	no horizon NLL; average LR / peak LR	8	8	9	0.1510001461424316
+cosine_lr_fraction_of_peak	registered_schedule_exposure	no horizon NLL; average LR / peak LR	9	9	10	0.1074129217824271
+block_exponential_fit	smooth_log_linear_fit	log-linear fit to H1-H16 block improvement	1	1	2	0.032371417062545454
+block_exponential_fit	smooth_log_linear_fit	log-linear fit to H1-H16 block improvement	2	2	3	0.023699897767677083
+block_exponential_fit	smooth_log_linear_fit	log-linear fit to H1-H16 block improvement	3	3	4	0.017351268655094777
+block_exponential_fit	smooth_log_linear_fit	log-linear fit to H1-H16 block improvement	4	4	5	0.012703283655167553
+block_exponential_fit	smooth_log_linear_fit	log-linear fit to H1-H16 block improvement	5	5	6	0.009300381362965288
+block_exponential_fit	smooth_log_linear_fit	log-linear fit to H1-H16 block improvement	6	6	7	0.0068090342500858837
+block_exponential_fit	smooth_log_linear_fit	log-linear fit to H1-H16 block improvement	7	7	8	0.0049850587421568331
+block_exponential_fit	smooth_log_linear_fit	log-linear fit to H1-H16 block improvement	8	8	9	0.0036496821355305772
+block_exponential_fit	smooth_log_linear_fit	log-linear fit to H1-H16 block improvement	9	9	10	0.0026720206078550504

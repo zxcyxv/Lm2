@@ -1,0 +1,12 @@
+key	value
+final_step	100
+mechanism_criterion_passed	false
+h1_nll_improved	true
+h2_h4_token_agreement_threshold	true
+mean_ar_state_cosine_threshold	true
+h1_path_tolerance	true
+posterior_prior_readouts_distinct	false
+step100_row_present	true
+all_training_losses_and_gradients_finite	true
+wall_s	176.48077750205994
+peak_vram_bytes	7531728896

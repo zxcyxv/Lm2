@@ -16,6 +16,44 @@ def make_model(decoder_mode="exact-inverse", head_mode="cosine"):
     )
 
 
+def test_dense_action_encode_matches_literal_prefix_reencoding():
+    model = make_model().eval()
+    tokens = torch.randint(0, 41, (2, 6))
+    actions = torch.randint(0, 41, (2, 6))
+    dense = model.dense_action_encode(tokens, actions)
+    for anchor in range(tokens.shape[1]):
+        tape = torch.cat(
+            (tokens[:, : anchor + 1], actions[:, anchor : anchor + 1]),
+            dim=1,
+        )
+        expected, _ = model.encode(tape)
+        torch.testing.assert_close(
+            dense[:, anchor],
+            expected[:, -1],
+            atol=3e-5,
+            rtol=3e-5,
+        )
+
+
+def test_dense_action_tape_encode_matches_literal_prefix_reencoding():
+    model = make_model().eval()
+    tokens = torch.randint(0, 41, (2, 6))
+    actions = torch.randint(0, 41, (2, 6, 3))
+    dense = model.dense_action_tape_encode(tokens, actions)
+    for anchor in range(tokens.shape[1]):
+        tape = torch.cat(
+            (tokens[:, : anchor + 1], actions[:, anchor]),
+            dim=1,
+        )
+        expected, _ = model.encode(tape)
+        torch.testing.assert_close(
+            dense[:, anchor],
+            expected[:, -actions.shape[2] :],
+            atol=4e-5,
+            rtol=4e-5,
+        )
+
+
 def test_exact_dense_path_matches_independent_prefix_tapes():
     model = make_model().eval()
     tokens = torch.randint(0, 41, (2, 7))
@@ -137,3 +175,48 @@ def test_all_variants_send_ce_gradient_to_operator():
         assert gradient is not None
         assert torch.isfinite(gradient).all()
         assert gradient.norm() > 0
+
+
+def test_simplex_tied_head_is_fixed_equal_norm_nearest_codebook():
+    model = K1DecoderAblationLM(
+        17,
+        width=32,
+        encoder_blocks=1,
+        decoder_mode="exact-inverse",
+        head_mode="simplex-tied",
+        simplex_logit_scale=12.0,
+    )
+    codebook = model.embedding_weight.detach()
+    gram = codebook @ codebook.T
+    expected = torch.full((17, 17), -1.0 / 16)
+    expected.fill_diagonal_(1.0)
+    torch.testing.assert_close(gram, expected, atol=2e-6, rtol=2e-6)
+    assert not model.embedding_weight.requires_grad
+    assert not model.encoder.head_norm.weight.requires_grad
+    assert model.token_logits(codebook).argmax(dim=-1).equal(
+        torch.arange(17)
+    )
+
+    query = F.normalize(torch.randn(5, 32), dim=-1)
+    dot_choice = model.token_logits(query).argmax(dim=-1)
+    distance_choice = torch.cdist(query, codebook).argmin(dim=-1)
+    assert torch.equal(dot_choice, distance_choice)
+
+
+def test_simplex_raw_tied_head_has_no_hidden_normalization():
+    model = K1DecoderAblationLM(
+        17,
+        width=32,
+        encoder_blocks=1,
+        decoder_mode="exact-inverse",
+        head_mode="simplex-raw-tied",
+        simplex_logit_scale=12.0,
+    )
+    codebook = model.embedding_weight.detach()
+    assert model.token_logits(codebook).argmax(dim=-1).equal(
+        torch.arange(17)
+    )
+    torch.testing.assert_close(
+        model.token_logits(2.0 * codebook),
+        2.0 * model.token_logits(codebook),
+    )

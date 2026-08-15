@@ -1,0 +1,10 @@
+key	value
+rows	16384.0
+max_full_replay_error	0.0
+max_p_replay_error	0.0
+max_probability_sum_error	4.76837158203125e-07
+canonical_top1_errors	0.0
+canonical_max_probability_mean	0.9999732375144958
+parent_h1_p_z_top1_agreement	0.40087890625
+audit_h1_p_z_top1_agreement	0.40087890625
+parent_agreement_abs_error	0.0

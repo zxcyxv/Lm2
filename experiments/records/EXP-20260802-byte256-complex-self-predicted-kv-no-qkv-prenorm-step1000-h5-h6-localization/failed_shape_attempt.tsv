@@ -1,0 +1,3 @@
+attempt	source_batch_shape	selected_loss_scope	horizon	reconstruction_relative_error	accepted_as_attribution
+row_rerun_batch1	1 row	row within original physical microbatch	5	0.015828804064616387	0
+row_rerun_batch1	1 row	row within original physical microbatch	6	0.06869228122114884	0

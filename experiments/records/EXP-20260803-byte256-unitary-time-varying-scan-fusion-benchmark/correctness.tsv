@@ -1,0 +1,3 @@
+comparison	eager_loss	candidate_loss	loss_abs_difference	gradient_cosine	gradient_relative_l2	gradient_max_abs_difference	logit_max_abs_difference	logit_relative_l2
+rotating-frame-cumsum_vs_eager-hillis-steele	3.040675640106201	3.040675640106201	0.0	0.99995123034312	0.009876609683682598	0.00018310546875	8.0108642578125e-05	4.417789227773028e-07
+fused-triton-rotating-frame_vs_eager-hillis-steele	3.040675640106201	3.040675640106201	0.0	0.9999520302713027	0.009795064567080082	0.000152587890625	8.0108642578125e-05	4.41691639707642e-07

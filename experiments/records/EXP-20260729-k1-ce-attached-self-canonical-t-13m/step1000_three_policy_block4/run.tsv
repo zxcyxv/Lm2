@@ -1,0 +1,11 @@
+key	value
+checkpoint	outputs/experiments/EXP-20260729-k1-ce-attached-self-canonical-t-13m/step1000.pt
+checkpoint_step	1000
+checkpoint_sha256	4aadd63d831d1de6e391269f0ceb6dcd92da4870810e70e7158dd4abcd13b115
+validation_starts_sha256	7dfbbbe6d3c4393b13459a4db116bbca9e429a5544e596c4035f7a140987e1e0
+validation_sequences	128
+microbatch	4
+selection	greedy
+gold_boundary_interval	4
+parameter_updates	0
+test_split_read	false

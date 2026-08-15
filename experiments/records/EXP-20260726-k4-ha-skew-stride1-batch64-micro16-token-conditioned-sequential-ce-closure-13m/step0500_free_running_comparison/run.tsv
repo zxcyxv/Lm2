@@ -1,0 +1,16 @@
+key	value
+step	500
+split	validation
+seed	1337
+start_seed	3361
+sample_seed	6338
+selective_noise_seed	6339
+samples	64
+prompt_tokens	64
+new_tokens	64
+microbatch	8
+precision	strict_float32_no_tf32
+sequential_checkpoint	outputs/experiments/EXP-20260726-k4-ha-skew-stride1-batch64-micro16-token-conditioned-sequential-ce-closure-13m/step0500.pt
+sequential_sha256	a3daff6bbe01e41633ac7e9f9a06557cae9eb4dbd5572a2f977f5239419675e6
+selective_checkpoint	outputs/experiments/EXP-20260725-k4-ha-skew-stride1-batch64-micro16-selective-innovation-tape-three-trajectory-prior-tau005-h1-online-mse-13m/step0500.pt
+selective_sha256	0771b0e1f42f319bd1e1d2e85fd4c5c49c6a5b6fdad4258fc394835684622128

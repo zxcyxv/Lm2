@@ -1,0 +1,20 @@
+kind	alpha	left_alpha	right_alpha	value	reference	relative_error	detail
+forward_directional_difference	1e-06	nan	nan	-25.977028773382926	-7.154589892798876	2.6308200976730913	(CE(+epsilon)-CE(0))/epsilon
+central_directional_difference	1e-06	-1e-06	1e-06	72.99814802053106	-7.154589892798876	11.202981458658309	(CE(+epsilon)-CE(-epsilon))/(2*epsilon)
+forward_directional_difference	3e-06	nan	nan	-48.54878427333157	-7.154589892798876	5.785683736002272	(CE(+epsilon)-CE(0))/epsilon
+central_directional_difference	3e-06	-3e-06	3e-06	-15.443198884431315	-7.154589892798876	1.1585023203041949	(CE(+epsilon)-CE(-epsilon))/(2*epsilon)
+forward_directional_difference	1e-05	nan	nan	-28.86500141840997	-7.154589892798876	3.0344732333942313	(CE(+epsilon)-CE(0))/epsilon
+central_directional_difference	1e-05	-1e-05	1e-05	-10.670925444955515	-7.154589892798876	0.4914796801555103	(CE(+epsilon)-CE(-epsilon))/(2*epsilon)
+sampled_minimum_alpha	0.006827148437500001	0.006818359375000001	0.006835937500000001	3.1805375007633394	3.1812364377080833	0.00021970606662842878	lowest CE among all registered/refined samples
+minimum_left_secant_slope	0.006827148437500001	0.006818359375000001	0.006827148437500001	-12.58163318440542	nan	nan	negative slope expected immediately before sampled minimum
+minimum_right_secant_slope	0.006827148437500001	0.006827148437500001	0.006835937500000001	25.070333893787502	nan	nan	positive slope expected immediately after sampled minimum
+baseline_crossing_alpha	0.0871052622795105	0.08710525035858155	0.08710527420043945	3.181250079121572	3.1812364377080833	4.288085389344188e-06	first post-minimum crossing of alpha-0 CE
+alpha0_reproduction	0.0	nan	nan	3.1812364377080833	3.1812364608049393	7.26033926365092e-09	
+alpha1_reproduction	1.0	nan	nan	3.195414762067795	3.195414748042822	4.389093212830578e-09	
+five_repeat_same_loaded_weights_ce_range	0.0	nan	nan	0.0	nan	nan	min=3.18123643771,max=3.18123643771
+five_repeat_reapplied_weights_ce_range	0.0	nan	nan	0.0	nan	nan	min=3.18123643771,max=3.18123643771
+five_repeat_same_loaded_weights_ce_range	0.006827148437500001	nan	nan	0.0	nan	nan	min=3.18053750076,max=3.18053750076
+five_repeat_reapplied_weights_ce_range	0.006827148437500001	nan	nan	0.0	nan	nan	min=3.18053750076,max=3.18053750076
+five_repeat_same_loaded_weights_ce_range	0.0871052622795105	nan	nan	0.0	nan	nan	min=3.18125007912,max=3.18125007912
+five_repeat_reapplied_weights_ce_range	0.0871052622795105	nan	nan	0.0	nan	nan	min=3.18125007912,max=3.18125007912
+near_zero_finite_difference_criterion_satisfied	nan	nan	nan	0.0	1.0	1.0	requires all registered central differences to share the autograd directional-derivative sign

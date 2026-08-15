@@ -1,0 +1,15 @@
+key	value
+split	validation
+seed	1337
+noise_seed	3361
+samples	8
+prompt_tokens	64
+new_tokens	64
+grassmann_policy	greedy_ar
+latent_policy	prior_argmax_block4
+latent_epoch	9
+grassmann_epoch	12
+grassmann_checkpoint	outputs/experiments/EXP-20260725-wikitext2-gpt2tok-20epoch-grassmann-v4-upstream-17m/grassmann_best.pt
+grassmann_checkpoint_sha256	cec28896c190e13bf69df94ecb0cee595b4aa60b775d61b9ddc6e4178854b954
+latent_checkpoint	outputs/experiments/EXP-20260725-wikitext2-gpt2tok-20epoch-selective-innovation-17m/best.pt
+latent_checkpoint_sha256	0266269c0ebf6ce8b3d696f11ea7235014a67c04e4caed2b385973ad4ea31231

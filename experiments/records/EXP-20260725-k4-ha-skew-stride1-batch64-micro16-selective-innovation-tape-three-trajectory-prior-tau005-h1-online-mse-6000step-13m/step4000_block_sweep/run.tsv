@@ -1,0 +1,12 @@
+key	value
+checkpoint	outputs/experiments/EXP-20260725-k4-ha-skew-stride1-batch64-micro16-selective-innovation-tape-three-trajectory-prior-tau005-h1-online-mse-6000step-13m/step4000.pt
+checkpoint_sha256	f7b27f871e469aaadd3681ae76bfb93afb359778ef011291e5f25576dc3f365c
+step	4000
+split	validation
+seed	1337
+evaluation_seed_offset	2024
+samples	64
+prompt_tokens	64
+new_tokens	64
+block_lengths	2,4,8,16,32
+selection	sampled_candidate_prior_then_greedy

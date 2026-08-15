@@ -1,0 +1,10 @@
+key	value
+experiment_id	EXP-20260802-byte256-complex-self-predicted-kv-h16-scale-jacobian-audit
+examples	2
+validation_start_indices	342139,1033517
+context	256
+horizons	16
+anchor_stride	16
+power_iterations	6
+device	cuda
+precision	strict_float32_no_tf32

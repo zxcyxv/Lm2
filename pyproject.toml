@@ -16,6 +16,7 @@ dependencies = [
 data = [
     "datasets",
     "tokenizers",
+    "transformers",
 ]
 test = [
     "pytest>=7",
@@ -29,6 +30,6 @@ package-dir = {"" = "src"}
 py-modules = ["mamba2", "protected_model", "shift_lm"]
 
 [tool.pytest.ini_options]
-pythonpath = ["src", "."]
+pythonpath = ["src", ".", "experiments/scripts"]
 testpaths = ["tests"]
 addopts = "-q"

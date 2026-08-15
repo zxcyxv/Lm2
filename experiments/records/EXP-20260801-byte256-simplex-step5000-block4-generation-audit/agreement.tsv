@@ -1,0 +1,14 @@
+key	value
+first_token_accuracy	1.0
+reference_accuracy	0.09895833333333333
+matching_prefix_tokens	1.0
+distinct_1	0.19791666666666666
+distinct_2	0.48677248677248675
+distinct_4	0.907103825136612
+immediate_repeat	0.6613756613756614
+period_2_repeat	0.39784946236559143
+period_4_repeat	0.011111111111111112
+repeated_bigram_coverage	0.6825396825396824
+repeated_4gram_coverage	0.16393442622950818
+longest_identical_run	4.666666666666667
+collapsed	0.0

@@ -32,3 +32,28 @@ def test_gzip_token_split_is_verified_and_materialized(tmp_path):
         token_memmap("train", root=tmp_path),
         values,
     )
+
+
+def test_manifest_can_select_uint8_tokens(tmp_path):
+    values = np.asarray([0, 1, 127, 128, 255], dtype=np.uint8)
+    path = tmp_path / "validation.bin"
+    path.write_bytes(values.tobytes())
+    with (tmp_path / "manifest.tsv").open("w", newline="") as handle:
+        writer = csv.writer(handle, delimiter="\t")
+        writer.writerow(
+            ("split", "path", "tokens", "bytes", "sha256", "dtype")
+        )
+        writer.writerow(
+            (
+                "validation",
+                str(path),
+                values.size,
+                values.nbytes,
+                hashlib.sha256(values.tobytes()).hexdigest(),
+                "uint8",
+            )
+        )
+
+    mapped = token_memmap("validation", root=tmp_path)
+    assert mapped.dtype == np.uint8
+    np.testing.assert_array_equal(mapped, values)

@@ -1,0 +1,2 @@
+start_step	target_step	schedule_steps	batch	microbatch	checkpoint	data_rng_restoration
+1000	6000	6000	64	16	outputs/experiments/EXP-20260801-byte256-simplex-tied-self-composition-h1-ce-13m/step1000.pt	deterministic_replay

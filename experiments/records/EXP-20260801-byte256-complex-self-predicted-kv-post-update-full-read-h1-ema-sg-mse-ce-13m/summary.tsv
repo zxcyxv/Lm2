@@ -1,0 +1,12 @@
+key	value
+final_step	1000
+mechanism_criterion_passed	false
+h1_nll_improved	true
+h1_latent_mse_improved	true
+h2_h4_token_agreement_threshold	false
+mean_ar_state_cosine_threshold	true
+h1_path_tolerance	true
+write_exceeds_no_write	true
+posterior_prior_readouts_distinct	true
+wall_s	718.5335710048676
+peak_vram_bytes	3094430208

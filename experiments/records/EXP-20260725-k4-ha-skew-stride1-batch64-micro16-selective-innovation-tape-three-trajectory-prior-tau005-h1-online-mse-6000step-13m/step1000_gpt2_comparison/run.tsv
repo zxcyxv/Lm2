@@ -1,0 +1,15 @@
+key	value
+latent_checkpoint	outputs/experiments/EXP-20260725-k4-ha-skew-stride1-batch64-micro16-selective-innovation-tape-three-trajectory-prior-tau005-h1-online-mse-6000step-13m/step1000.pt
+latent_checkpoint_sha256	d9c980b1ff0d32a95b67587a7af6c4255f482b0e3730ba7306608026f6d72db7
+latent_step	1000
+gpt2_checkpoint	/workspace/Lm/outputs/experiments/EXP-20260723-gpt2-baseline-matched-13m/best.pt
+gpt2_checkpoint_sha256	bfff4c3f369b034fd979bcec564a1a136c869fadc6c36b89f34c8a7d68963522
+gpt2_step	1000
+seed	1337
+generation_seed_offset	2024
+split	validation
+samples	64
+prompt_tokens	64
+new_tokens	64
+selection	greedy_target_free
+precision	strict_float32_no_tf32

@@ -1,0 +1,4 @@
+mode	chunk_size	h1_h16_mean_rollout_ce	h1_h16_mean_accuracy	labels
+feedback_h1loss_greedy_block1	1	7.063616083287073	0.18359375	16384
+feedback_h4loss_greedy_block4	4	3.4944135353564905	0.20355224609375	16384
+parallel_scan_open_block16	16	2.912845769651354	0.2362060546875	16384

@@ -1,0 +1,3 @@
+split	path	tokens	bytes	sha256	dtype
+train	data/wikitext103_bytes/train.bin	55000000	55000000	062a4d5419f3865f66add500c323f03f1223b86f809d47a787bdbc60b54759dc	uint8
+validation	data/wikitext103_bytes/validation.bin	1146709	1146709	7ffe866bb723736027b30046f5db623588285ef0f3c061872d53793c589327b0	uint8

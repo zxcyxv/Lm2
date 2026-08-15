@@ -1,0 +1,2 @@
+variant	parameters	trainable_parameters	best_step	best_val_nll	final_head_self_retrieval	wall_s	peak_vram_bytes
+inverse_rms	12966912	12966912	1000	4.391694009304047	0.99462890625	114.15558576583862	11300672512

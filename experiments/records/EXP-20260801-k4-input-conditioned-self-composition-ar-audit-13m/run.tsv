@@ -1,0 +1,13 @@
+key	value
+experiment_id	EXP-20260801-k4-input-conditioned-self-composition-ar-audit-13m
+source_experiment_id	EXP-20260801-k4-input-conditioned-kpower-h1-ce-only-tied-ar-closure-13m
+validation_starts	experiments/records/EXP-20260801-k4-input-conditioned-kpower-h1-ce-only-tied-ar-closure-13m/validation_starts.tsv
+validation_starts_sha256	6474a2ab04677b8cefa9ac36e9991e3c024389c1bae5fa08476d824f049c663d
+validation_examples	64
+recurrence	u_next=K(u_current)@u_current
+horizons	4
+anchor_stride	4
+step500_checkpoint	outputs/experiments/EXP-20260801-k4-input-conditioned-kpower-h1-ce-only-tied-ar-closure-13m/step0500.pt
+step500_checkpoint_sha256	05f2f478e1a879707ce04dc871c0fe74856f5ece00fa56d9c9cad14f632bab30
+step1000_checkpoint	outputs/experiments/EXP-20260801-k4-input-conditioned-kpower-h1-ce-only-tied-ar-closure-13m/step1000.pt
+step1000_checkpoint_sha256	0fb84a5393525d922754145cd0644ba49ac5331250a7449d427221c149fc59c1

@@ -1,0 +1,18 @@
+key	value
+experiment_id	EXP-20260815-byte256-unitary-time-varying-scan-h16-121m
+seed	1337
+split	wikitext103_bytes_train_validation
+steps	1000
+schedule_steps	6000
+effective_batch	64
+microbatch	16
+horizons	16
+anchor_stride	16
+central_rollout	time-varying-scan
+scan_backend	eager
+report_every	100
+checkpoint_every	500
+precision	strict_float32_no_tf32
+gpu	NVIDIA RTX A4500
+torch	2.8.0+cu128
+h1_feedback_max_logit_error	0.0

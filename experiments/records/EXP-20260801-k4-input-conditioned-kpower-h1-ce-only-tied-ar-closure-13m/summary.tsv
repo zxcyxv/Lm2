@@ -1,0 +1,10 @@
+key	value
+final_step	1000
+closure_criterion	false
+byte_followup_required	True
+wall_s	401.7353413105011
+peak_vram_bytes	2061286400
+cosine_horizons_improved	0.0
+relative_mse_horizons_improved	0.0
+late_reports_above_initial_median_cosine	0.0
+final_median_cosine_gain	-0.43963184246786113

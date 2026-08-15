@@ -1,0 +1,13 @@
+key	value
+rows	16384.0
+non_tied_margin_rows	16384.0
+flip_classification_errors	0.0
+max_flip_identity_error	7.62939453125e-06
+max_additive_reconstruction_error	3.814697265625e-06
+max_head_sum_error	1.9073486328125e-06
+max_shapley_sum_error	3.5762786865234375e-07
+max_parallel_replay_error	0.0
+max_read_replay_error	0.0
+counterfactual_ar_reference_max_logit_error	0.0
+counterfactual_h1_central_max_logit_error	0.0
+parent_h2_h4_agreement	0.24226888020833334

@@ -1,0 +1,7 @@
+key	value
+best_epoch	5
+best_val_h1_open_nll	5.7878389481661285
+best_val_h1_open_ppl	326.3070953293065
+test_evaluation	skipped
+wall_s	3961.630044221878
+peak_vram_bytes	11821934080

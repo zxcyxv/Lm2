@@ -1,0 +1,5 @@
+key	value
+best_step	1000
+best_val_open_token_nll	5.966936870478094
+wall_s	1653.924143075943
+peak_vram_bytes	10054511616

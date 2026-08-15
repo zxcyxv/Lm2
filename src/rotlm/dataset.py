@@ -93,4 +93,24 @@ def token_memmap(
     root: Path = DEFAULT_DATA_ROOT,
 ) -> np.memmap:
     path = materialize_token_split(split, root=root)
-    return np.memmap(path, dtype=np.uint16, mode="r")
+    row = _manifest_rows(root).get(split)
+    if row is None:
+        raise ValueError(f"split {split!r} is absent from dataset manifest")
+    dtype_name = row.get("dtype") or "uint16"
+    dtypes = {
+        "uint8": np.uint8,
+        "uint16": np.uint16,
+        "uint32": np.uint32,
+    }
+    if dtype_name not in dtypes:
+        raise ValueError(
+            f"unsupported token dtype {dtype_name!r} for split {split!r}"
+        )
+    values = np.memmap(path, dtype=dtypes[dtype_name], mode="r")
+    expected_tokens = int(row["tokens"])
+    if values.size != expected_tokens:
+        raise ValueError(
+            f"{path} contains {values.size} {dtype_name} values; "
+            f"manifest declares {expected_tokens}"
+        )
+    return values

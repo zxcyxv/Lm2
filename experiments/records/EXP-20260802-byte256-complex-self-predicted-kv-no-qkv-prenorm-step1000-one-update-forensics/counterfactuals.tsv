@@ -1,0 +1,694 @@
+phase	condition	horizon	group	loss	gradient_l2	gradient_ratio_to_control	forward_rms	forward_max_abs
+pre_update1001_train_batch	attached_raw	0	all	3.1812364608049393	69.36328433171	1.0		
+pre_update1001_train_batch	attached_raw	0	central.hidden_phase	3.1812364608049393	0.48549042217793764	1.0		
+pre_update1001_train_batch	attached_raw	0	central.key	3.1812364608049393	30.01078907555581	1.0		
+pre_update1001_train_batch	attached_raw	0	central.memory_phase	3.1812364608049393	0.8410874140779124	1.0		
+pre_update1001_train_batch	attached_raw	0	central.output	3.1812364608049393	23.031713763139457	1.0		
+pre_update1001_train_batch	attached_raw	0	central.query	3.1812364608049393	31.475609434255798	1.0		
+pre_update1001_train_batch	attached_raw	0	central.value	3.1812364608049393	19.26135711547054	1.0		
+pre_update1001_train_batch	attached_raw	0	revblock0.attn.proj	3.1812364608049393	0.0026641541943014622	1.0		
+pre_update1001_train_batch	attached_raw	0	revblock0.attn.qkv	3.1812364608049393	0.002037936746447393	1.0		
+pre_update1001_train_batch	attached_raw	0	revblock0.ffn	3.1812364608049393	30.946492182996668	1.0		
+pre_update1001_train_batch	attached_raw	0	revblock0.norm1	3.1812364608049393	6.268737338732535e-05	1.0		
+pre_update1001_train_batch	attached_raw	0	revblock0.norm2	3.1812364608049393	3.056190998779446	1.0		
+pre_update1001_train_batch	attached_raw	0	revblock1.attn.proj	3.1812364608049393	14.599373038429917	1.0		
+pre_update1001_train_batch	attached_raw	0	revblock1.attn.qkv	3.1812364608049393	26.241104798668204	1.0		
+pre_update1001_train_batch	attached_raw	0	revblock1.ffn	3.1812364608049393	12.158508219127329	1.0		
+pre_update1001_train_batch	attached_raw	0	revblock1.norm1	3.1812364608049393	0.9223255091173204	1.0		
+pre_update1001_train_batch	attached_raw	0	revblock1.norm2	3.1812364608049393	0.24071469400171347	1.0		
+pre_update1001_train_batch	attached_raw	1	loss_only	2.9898316860198975	nan	nan		
+pre_update1001_train_batch	attached_raw	2	loss_only	3.2067149877548218	nan	nan		
+pre_update1001_train_batch	attached_raw	3	loss_only	3.16011506319046	nan	nan		
+pre_update1001_train_batch	attached_raw	4	loss_only	3.1453570127487183	nan	nan		
+pre_update1001_train_batch	attached_raw	5	loss_only	3.1918490529060364	nan	nan		
+pre_update1001_train_batch	attached_raw	6	loss_only	3.2276763319969177	nan	nan		
+pre_update1001_train_batch	attached_raw	7	loss_only	3.1849993467330933	nan	nan		
+pre_update1001_train_batch	attached_raw	8	loss_only	3.205000936985016	nan	nan		
+pre_update1001_train_batch	attached_raw	9	loss_only	3.23611980676651	nan	nan		
+pre_update1001_train_batch	attached_raw	10	loss_only	3.199472665786743	nan	nan		
+pre_update1001_train_batch	attached_raw	11	loss_only	3.2369247674942017	nan	nan		
+pre_update1001_train_batch	attached_raw	12	loss_only	3.0893524885177612	nan	nan		
+pre_update1001_train_batch	attached_raw	13	loss_only	3.237261176109314	nan	nan		
+pre_update1001_train_batch	attached_raw	14	loss_only	3.1780068278312683	nan	nan		
+pre_update1001_train_batch	attached_raw	15	loss_only	3.207429885864258	nan	nan		
+pre_update1001_train_batch	attached_raw	16	loss_only	3.2036713361740112	nan	nan		
+pre_update1001_train_batch	attached_raw	1	forward.decoded_hidden	nan	nan	nan	3.335442244472333	43.7772331237793
+pre_update1001_train_batch	attached_raw	1	forward.innovation_delta	nan	nan	nan	3633.3197307269647	270245.375
+pre_update1001_train_batch	attached_raw	1	forward.innovation_memory	nan	nan	nan	398.0749242926397	4194.88232421875
+pre_update1001_train_batch	attached_raw	1	forward.logits	nan	nan	nan	15.834646263211345	128.36947631835938
+pre_update1001_train_batch	attached_raw	1	forward.p	nan	nan	nan	1.9428317403269797	30.41196060180664
+pre_update1001_train_batch	attached_raw	1	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_raw	1	forward.stored_z	nan	nan	nan	0.999999552965241	5.840836048126221
+pre_update1001_train_batch	attached_raw	2	forward.decoded_hidden	nan	nan	nan	2.7554843594733067	30.462697982788086
+pre_update1001_train_batch	attached_raw	2	forward.innovation_delta	nan	nan	nan	304.77587695056167	41219.7734375
+pre_update1001_train_batch	attached_raw	2	forward.innovation_memory	nan	nan	nan	80.88781911967874	1067.7811279296875
+pre_update1001_train_batch	attached_raw	2	forward.logits	nan	nan	nan	8.629781685735159	73.71125793457031
+pre_update1001_train_batch	attached_raw	2	forward.p	nan	nan	nan	1.0348340877422033	14.572154998779297
+pre_update1001_train_batch	attached_raw	2	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_raw	2	forward.stored_z	nan	nan	nan	0.9999999850988391	5.684449195861816
+pre_update1001_train_batch	attached_raw	3	forward.decoded_hidden	nan	nan	nan	2.4896638088638823	30.403522491455078
+pre_update1001_train_batch	attached_raw	3	forward.innovation_delta	nan	nan	nan	199.43562693238295	30191.544921875
+pre_update1001_train_batch	attached_raw	3	forward.innovation_memory	nan	nan	nan	36.80543186247595	838.6480102539062
+pre_update1001_train_batch	attached_raw	3	forward.logits	nan	nan	nan	7.154418639410418	70.81014251708984
+pre_update1001_train_batch	attached_raw	3	forward.p	nan	nan	nan	0.6420836225674365	13.134143829345703
+pre_update1001_train_batch	attached_raw	3	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_raw	3	forward.stored_z	nan	nan	nan	0.9999924898450019	5.263047695159912
+pre_update1001_train_batch	attached_raw	4	forward.decoded_hidden	nan	nan	nan	2.446077940218567	29.801244735717773
+pre_update1001_train_batch	attached_raw	4	forward.innovation_delta	nan	nan	nan	7.580754447632616	349.200927734375
+pre_update1001_train_batch	attached_raw	4	forward.innovation_memory	nan	nan	nan	21.225650168322314	76.78569793701172
+pre_update1001_train_batch	attached_raw	4	forward.logits	nan	nan	nan	6.909365783489304	18.365554809570312
+pre_update1001_train_batch	attached_raw	4	forward.p	nan	nan	nan	0.5767158132700995	5.162233352661133
+pre_update1001_train_batch	attached_raw	4	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_raw	4	forward.stored_z	nan	nan	nan	0.9999995529652721	5.4974541664123535
+pre_update1001_train_batch	attached_raw	5	forward.decoded_hidden	nan	nan	nan	2.4432084125491023	29.4141845703125
+pre_update1001_train_batch	attached_raw	5	forward.innovation_delta	nan	nan	nan	7.056190925964765	51.79142761230469
+pre_update1001_train_batch	attached_raw	5	forward.innovation_memory	nan	nan	nan	20.72853022800133	25.403728485107422
+pre_update1001_train_batch	attached_raw	5	forward.logits	nan	nan	nan	6.815591154997096	17.614744186401367
+pre_update1001_train_batch	attached_raw	5	forward.p	nan	nan	nan	0.5715793636139958	3.2288551330566406
+pre_update1001_train_batch	attached_raw	5	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_raw	5	forward.stored_z	nan	nan	nan	0.9999999701976781	5.19723653793335
+pre_update1001_train_batch	attached_raw	6	forward.decoded_hidden	nan	nan	nan	2.4523208949542155	29.2332706451416
+pre_update1001_train_batch	attached_raw	6	forward.innovation_delta	nan	nan	nan	8.656424883954157	368.82366943359375
+pre_update1001_train_batch	attached_raw	6	forward.innovation_memory	nan	nan	nan	21.474908511700963	78.74180603027344
+pre_update1001_train_batch	attached_raw	6	forward.logits	nan	nan	nan	6.749643035581393	17.19916343688965
+pre_update1001_train_batch	attached_raw	6	forward.p	nan	nan	nan	0.5779368082116658	6.043338298797607
+pre_update1001_train_batch	attached_raw	6	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_raw	6	forward.stored_z	nan	nan	nan	1.0	5.196287631988525
+pre_update1001_train_batch	attached_raw	7	forward.decoded_hidden	nan	nan	nan	2.4536827104557197	29.151491165161133
+pre_update1001_train_batch	attached_raw	7	forward.innovation_delta	nan	nan	nan	7.13960065509751	56.81419372558594
+pre_update1001_train_batch	attached_raw	7	forward.innovation_memory	nan	nan	nan	20.89279255740975	26.488319396972656
+pre_update1001_train_batch	attached_raw	7	forward.logits	nan	nan	nan	6.722980969196415	16.749906539916992
+pre_update1001_train_batch	attached_raw	7	forward.p	nan	nan	nan	0.5747931418433857	3.3406591415405273
+pre_update1001_train_batch	attached_raw	7	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0
+pre_update1001_train_batch	attached_raw	7	forward.stored_z	nan	nan	nan	1.0	5.196166515350342
+pre_update1001_train_batch	attached_raw	8	forward.decoded_hidden	nan	nan	nan	2.4556662547625003	29.055774688720703
+pre_update1001_train_batch	attached_raw	8	forward.innovation_delta	nan	nan	nan	7.138583883941119	43.2869873046875
+pre_update1001_train_batch	attached_raw	8	forward.innovation_memory	nan	nan	nan	20.902529321228123	22.98781394958496
+pre_update1001_train_batch	attached_raw	8	forward.logits	nan	nan	nan	6.7114189927089285	16.573728561401367
+pre_update1001_train_batch	attached_raw	8	forward.p	nan	nan	nan	0.575016419284895	3.1560235023498535
+pre_update1001_train_batch	attached_raw	8	forward.stored_memory	nan	nan	nan	0.9999999701976781	1.0000001192092896
+pre_update1001_train_batch	attached_raw	8	forward.stored_z	nan	nan	nan	0.9999999850988391	5.196847438812256
+pre_update1001_train_batch	attached_raw	9	forward.decoded_hidden	nan	nan	nan	2.4574097007562328	28.949398040771484
+pre_update1001_train_batch	attached_raw	9	forward.innovation_delta	nan	nan	nan	7.141359013279723	38.41569519042969
+pre_update1001_train_batch	attached_raw	9	forward.innovation_memory	nan	nan	nan	20.908818434879343	21.381425857543945
+pre_update1001_train_batch	attached_raw	9	forward.logits	nan	nan	nan	6.700762046273663	16.50067901611328
+pre_update1001_train_batch	attached_raw	9	forward.p	nan	nan	nan	0.5751345770158812	3.0373544692993164
+pre_update1001_train_batch	attached_raw	9	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_raw	9	forward.stored_z	nan	nan	nan	1.0	5.196300506591797
+pre_update1001_train_batch	attached_raw	10	forward.decoded_hidden	nan	nan	nan	2.4588463242899037	28.882156372070312
+pre_update1001_train_batch	attached_raw	10	forward.innovation_delta	nan	nan	nan	7.1442336116429015	37.64849853515625
+pre_update1001_train_batch	attached_raw	10	forward.innovation_memory	nan	nan	nan	20.914257083291886	21.111358642578125
+pre_update1001_train_batch	attached_raw	10	forward.logits	nan	nan	nan	6.683556038531339	16.422826766967773
+pre_update1001_train_batch	attached_raw	10	forward.p	nan	nan	nan	0.5752220603883492	3.015056610107422
+pre_update1001_train_batch	attached_raw	10	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_raw	10	forward.stored_z	nan	nan	nan	0.9999999403953561	5.1958112716674805
+pre_update1001_train_batch	attached_raw	11	forward.decoded_hidden	nan	nan	nan	2.46012348004864	28.852054595947266
+pre_update1001_train_batch	attached_raw	11	forward.innovation_delta	nan	nan	nan	7.145592098094164	37.33666229248047
+pre_update1001_train_batch	attached_raw	11	forward.innovation_memory	nan	nan	nan	20.91679812043814	20.99589729309082
+pre_update1001_train_batch	attached_raw	11	forward.logits	nan	nan	nan	6.662313906059348	16.46710777282715
+pre_update1001_train_batch	attached_raw	11	forward.p	nan	nan	nan	0.5752627254058233	3.0045199394226074
+pre_update1001_train_batch	attached_raw	11	forward.stored_memory	nan	nan	nan	0.9999999850988391	1.0000001192092896
+pre_update1001_train_batch	attached_raw	11	forward.stored_z	nan	nan	nan	0.9999999403953552	5.195621013641357
+pre_update1001_train_batch	attached_raw	12	forward.decoded_hidden	nan	nan	nan	2.461318306470845	28.83980941772461
+pre_update1001_train_batch	attached_raw	12	forward.innovation_delta	nan	nan	nan	7.1462432155575035	37.22085189819336
+pre_update1001_train_batch	attached_raw	12	forward.innovation_memory	nan	nan	nan	20.91801834221256	20.953479766845703
+pre_update1001_train_batch	attached_raw	12	forward.logits	nan	nan	nan	6.640624015962192	16.474246978759766
+pre_update1001_train_batch	attached_raw	12	forward.p	nan	nan	nan	0.5752821415769331	3.0004358291625977
+pre_update1001_train_batch	attached_raw	12	forward.stored_memory	nan	nan	nan	1.0	1.0
+pre_update1001_train_batch	attached_raw	12	forward.stored_z	nan	nan	nan	0.9999999254941944	5.195514678955078
+pre_update1001_train_batch	attached_raw	13	forward.decoded_hidden	nan	nan	nan	2.46244788620798	28.83771324157715
+pre_update1001_train_batch	attached_raw	13	forward.innovation_delta	nan	nan	nan	7.146544099055494	37.16938781738281
+pre_update1001_train_batch	attached_raw	13	forward.innovation_memory	nan	nan	nan	20.91858291650124	20.934850692749023
+pre_update1001_train_batch	attached_raw	13	forward.logits	nan	nan	nan	6.620085236185265	16.350812911987305
+pre_update1001_train_batch	attached_raw	13	forward.p	nan	nan	nan	0.5752911269687204	2.9986214637756348
+pre_update1001_train_batch	attached_raw	13	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_raw	13	forward.stored_z	nan	nan	nan	0.9999999254941944	5.195461750030518
+pre_update1001_train_batch	attached_raw	14	forward.decoded_hidden	nan	nan	nan	2.463559662783802	28.84489631652832
+pre_update1001_train_batch	attached_raw	14	forward.innovation_delta	nan	nan	nan	7.146682024044902	37.14574432373047
+pre_update1001_train_batch	attached_raw	14	forward.innovation_memory	nan	nan	nan	20.91884088521289	20.926349639892578
+pre_update1001_train_batch	attached_raw	14	forward.logits	nan	nan	nan	6.6020026603928565	16.1766300201416
+pre_update1001_train_batch	attached_raw	14	forward.p	nan	nan	nan	0.575295269489773	2.9977946281433105
+pre_update1001_train_batch	attached_raw	14	forward.stored_memory	nan	nan	nan	0.9999999850988391	1.0000001192092896
+pre_update1001_train_batch	attached_raw	14	forward.stored_z	nan	nan	nan	0.9999999403953552	5.195435523986816
+pre_update1001_train_batch	attached_raw	15	forward.decoded_hidden	nan	nan	nan	2.464718930220627	28.856008529663086
+pre_update1001_train_batch	attached_raw	15	forward.innovation_delta	nan	nan	nan	7.146745920190616	37.13480758666992
+pre_update1001_train_batch	attached_raw	15	forward.innovation_memory	nan	nan	nan	20.918961048137454	20.922420501708984
+pre_update1001_train_batch	attached_raw	15	forward.logits	nan	nan	nan	6.587503798080432	16.127487182617188
+pre_update1001_train_batch	attached_raw	15	forward.p	nan	nan	nan	0.5752971768380246	2.9974136352539062
+pre_update1001_train_batch	attached_raw	15	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_raw	15	forward.stored_z	nan	nan	nan	0.9999999254941944	5.1954216957092285
+pre_update1001_train_batch	attached_raw	16	forward.decoded_hidden	nan	nan	nan	2.465928425937087	28.85869598388672
+pre_update1001_train_batch	attached_raw	16	forward.innovation_delta	nan	nan	nan	7.146775484087043	37.129756927490234
+pre_update1001_train_batch	attached_raw	16	forward.innovation_memory	nan	nan	nan	20.919015884401762	20.92060661315918
+pre_update1001_train_batch	attached_raw	16	forward.logits	nan	nan	nan	6.575164659592921	16.027690887451172
+pre_update1001_train_batch	attached_raw	16	forward.p	nan	nan	nan	0.5752980411052913	2.9972376823425293
+pre_update1001_train_batch	attached_raw	16	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_raw	16	forward.stored_z	nan	nan	nan	0.9999999403953552	5.1954169273376465
+pre_update1001_train_batch	detached_raw	0	all	3.1812364272773266	20.14215860008397	0.2903864601301155		
+pre_update1001_train_batch	detached_raw	0	central.hidden_phase	3.1812364272773266	0.0034834725611027437	0.007175162272976854		
+pre_update1001_train_batch	detached_raw	0	central.key	3.1812364272773266	0.16990342533316777	0.005661411464570799		
+pre_update1001_train_batch	detached_raw	0	central.memory_phase	3.1812364272773266	0.006091576760969242	0.007242501384529054		
+pre_update1001_train_batch	detached_raw	0	central.output	3.1812364272773266	19.873175003426024	0.8628613227744937		
+pre_update1001_train_batch	detached_raw	0	central.query	3.1812364272773266	0.24544777936612788	0.007798031039837472		
+pre_update1001_train_batch	detached_raw	0	central.value	3.1812364272773266	0.3640406884466296	0.018900053940344403		
+pre_update1001_train_batch	detached_raw	0	revblock0.attn.proj	3.1812364272773266	0.0026641541943014622	1.0		
+pre_update1001_train_batch	detached_raw	0	revblock0.attn.qkv	3.1812364272773266	0.002037936746447393	1.0		
+pre_update1001_train_batch	detached_raw	0	revblock0.ffn	3.1812364272773266	0.22684008682271653	0.007330074293439701		
+pre_update1001_train_batch	detached_raw	0	revblock0.norm1	3.1812364272773266	6.215149471615074e-05	0.9914515692360631		
+pre_update1001_train_batch	detached_raw	0	revblock0.norm2	3.1812364272773266	0.024226550991630097	0.007927040882361566		
+pre_update1001_train_batch	detached_raw	0	revblock1.attn.proj	3.1812364272773266	2.7415549045806693	0.18778579719581634		
+pre_update1001_train_batch	detached_raw	0	revblock1.attn.qkv	3.1812364272773266	1.7145720594675902	0.06533917198313269		
+pre_update1001_train_batch	detached_raw	0	revblock1.ffn	3.1812364272773266	0.18321675368467424	0.015069015900852394		
+pre_update1001_train_batch	detached_raw	0	revblock1.norm1	3.1812364272773266	0.016426127177257457	0.017809468582276892		
+pre_update1001_train_batch	detached_raw	0	revblock1.norm2	3.1812364272773266	0.0028738683977890425	0.011938898909796448		
+pre_update1001_train_batch	detached_raw	1	loss_only	2.9898316860198975	nan	nan		
+pre_update1001_train_batch	detached_raw	2	loss_only	3.2067149877548218	nan	nan		
+pre_update1001_train_batch	detached_raw	3	loss_only	3.16011506319046	nan	nan		
+pre_update1001_train_batch	detached_raw	4	loss_only	3.145357072353363	nan	nan		
+pre_update1001_train_batch	detached_raw	5	loss_only	3.191848933696747	nan	nan		
+pre_update1001_train_batch	detached_raw	6	loss_only	3.2276763319969177	nan	nan		
+pre_update1001_train_batch	detached_raw	7	loss_only	3.1849992275238037	nan	nan		
+pre_update1001_train_batch	detached_raw	8	loss_only	3.2050008177757263	nan	nan		
+pre_update1001_train_batch	detached_raw	9	loss_only	3.236119866371155	nan	nan		
+pre_update1001_train_batch	detached_raw	10	loss_only	3.1994726061820984	nan	nan		
+pre_update1001_train_batch	detached_raw	11	loss_only	3.236924648284912	nan	nan		
+pre_update1001_train_batch	detached_raw	12	loss_only	3.0893524885177612	nan	nan		
+pre_update1001_train_batch	detached_raw	13	loss_only	3.2372609972953796	nan	nan		
+pre_update1001_train_batch	detached_raw	14	loss_only	3.178006887435913	nan	nan		
+pre_update1001_train_batch	detached_raw	15	loss_only	3.207429826259613	nan	nan		
+pre_update1001_train_batch	detached_raw	16	loss_only	3.203671395778656	nan	nan		
+pre_update1001_train_batch	detached_raw	1	forward.decoded_hidden	nan	nan	nan	3.335442244472333	43.7772331237793
+pre_update1001_train_batch	detached_raw	1	forward.innovation_delta	nan	nan	nan	3633.3197307269647	270245.375
+pre_update1001_train_batch	detached_raw	1	forward.innovation_memory	nan	nan	nan	398.0749242926397	4194.88232421875
+pre_update1001_train_batch	detached_raw	1	forward.logits	nan	nan	nan	15.834646263211345	128.36947631835938
+pre_update1001_train_batch	detached_raw	1	forward.p	nan	nan	nan	1.9428317403269797	30.41196060180664
+pre_update1001_train_batch	detached_raw	1	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_raw	1	forward.stored_z	nan	nan	nan	0.999999552965241	5.840836048126221
+pre_update1001_train_batch	detached_raw	2	forward.decoded_hidden	nan	nan	nan	2.7554843594733067	30.462697982788086
+pre_update1001_train_batch	detached_raw	2	forward.innovation_delta	nan	nan	nan	304.77587695056167	41219.7734375
+pre_update1001_train_batch	detached_raw	2	forward.innovation_memory	nan	nan	nan	80.88781911967874	1067.7811279296875
+pre_update1001_train_batch	detached_raw	2	forward.logits	nan	nan	nan	8.629781685735159	73.71125793457031
+pre_update1001_train_batch	detached_raw	2	forward.p	nan	nan	nan	1.0348340877422033	14.572154998779297
+pre_update1001_train_batch	detached_raw	2	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_raw	2	forward.stored_z	nan	nan	nan	0.9999999850988391	5.684449195861816
+pre_update1001_train_batch	detached_raw	3	forward.decoded_hidden	nan	nan	nan	2.4896638088638823	30.403522491455078
+pre_update1001_train_batch	detached_raw	3	forward.innovation_delta	nan	nan	nan	199.43562693238295	30191.544921875
+pre_update1001_train_batch	detached_raw	3	forward.innovation_memory	nan	nan	nan	36.80543186247595	838.6480102539062
+pre_update1001_train_batch	detached_raw	3	forward.logits	nan	nan	nan	7.154418639410418	70.81014251708984
+pre_update1001_train_batch	detached_raw	3	forward.p	nan	nan	nan	0.6420836225674365	13.134143829345703
+pre_update1001_train_batch	detached_raw	3	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_raw	3	forward.stored_z	nan	nan	nan	0.9999924898450019	5.263047695159912
+pre_update1001_train_batch	detached_raw	4	forward.decoded_hidden	nan	nan	nan	2.446077940218567	29.801246643066406
+pre_update1001_train_batch	detached_raw	4	forward.innovation_delta	nan	nan	nan	7.580754447632616	349.200927734375
+pre_update1001_train_batch	detached_raw	4	forward.innovation_memory	nan	nan	nan	21.225650168322314	76.78569793701172
+pre_update1001_train_batch	detached_raw	4	forward.logits	nan	nan	nan	6.909365783489304	18.365554809570312
+pre_update1001_train_batch	detached_raw	4	forward.p	nan	nan	nan	0.5767158132700995	5.162233352661133
+pre_update1001_train_batch	detached_raw	4	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_raw	4	forward.stored_z	nan	nan	nan	0.9999995529652721	5.4974541664123535
+pre_update1001_train_batch	detached_raw	5	forward.decoded_hidden	nan	nan	nan	2.4432084125491023	29.4141845703125
+pre_update1001_train_batch	detached_raw	5	forward.innovation_delta	nan	nan	nan	7.056190925964765	51.79142761230469
+pre_update1001_train_batch	detached_raw	5	forward.innovation_memory	nan	nan	nan	20.72853022800133	25.403728485107422
+pre_update1001_train_batch	detached_raw	5	forward.logits	nan	nan	nan	6.815591154997096	17.614744186401367
+pre_update1001_train_batch	detached_raw	5	forward.p	nan	nan	nan	0.5715793636139958	3.2288551330566406
+pre_update1001_train_batch	detached_raw	5	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_raw	5	forward.stored_z	nan	nan	nan	0.9999999701976781	5.19723653793335
+pre_update1001_train_batch	detached_raw	6	forward.decoded_hidden	nan	nan	nan	2.4523208949542155	29.2332706451416
+pre_update1001_train_batch	detached_raw	6	forward.innovation_delta	nan	nan	nan	8.656424883954157	368.82366943359375
+pre_update1001_train_batch	detached_raw	6	forward.innovation_memory	nan	nan	nan	21.474908511700963	78.74180603027344
+pre_update1001_train_batch	detached_raw	6	forward.logits	nan	nan	nan	6.749643035581393	17.19916343688965
+pre_update1001_train_batch	detached_raw	6	forward.p	nan	nan	nan	0.5779368082116658	6.043338298797607
+pre_update1001_train_batch	detached_raw	6	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_raw	6	forward.stored_z	nan	nan	nan	1.0	5.196287631988525
+pre_update1001_train_batch	detached_raw	7	forward.decoded_hidden	nan	nan	nan	2.4536827104557197	29.151491165161133
+pre_update1001_train_batch	detached_raw	7	forward.innovation_delta	nan	nan	nan	7.13960065509751	56.81419372558594
+pre_update1001_train_batch	detached_raw	7	forward.innovation_memory	nan	nan	nan	20.89279255740975	26.488319396972656
+pre_update1001_train_batch	detached_raw	7	forward.logits	nan	nan	nan	6.722980969196415	16.749906539916992
+pre_update1001_train_batch	detached_raw	7	forward.p	nan	nan	nan	0.5747931418433857	3.3406591415405273
+pre_update1001_train_batch	detached_raw	7	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0
+pre_update1001_train_batch	detached_raw	7	forward.stored_z	nan	nan	nan	1.0	5.196166515350342
+pre_update1001_train_batch	detached_raw	8	forward.decoded_hidden	nan	nan	nan	2.4556662547625003	29.055776596069336
+pre_update1001_train_batch	detached_raw	8	forward.innovation_delta	nan	nan	nan	7.138583883941119	43.2869873046875
+pre_update1001_train_batch	detached_raw	8	forward.innovation_memory	nan	nan	nan	20.902529321228123	22.98781394958496
+pre_update1001_train_batch	detached_raw	8	forward.logits	nan	nan	nan	6.7114189927089285	16.573728561401367
+pre_update1001_train_batch	detached_raw	8	forward.p	nan	nan	nan	0.575016419284895	3.1560235023498535
+pre_update1001_train_batch	detached_raw	8	forward.stored_memory	nan	nan	nan	0.9999999701976781	1.0000001192092896
+pre_update1001_train_batch	detached_raw	8	forward.stored_z	nan	nan	nan	0.9999999850988391	5.196847438812256
+pre_update1001_train_batch	detached_raw	9	forward.decoded_hidden	nan	nan	nan	2.457409641537708	28.949398040771484
+pre_update1001_train_batch	detached_raw	9	forward.innovation_delta	nan	nan	nan	7.141359013279723	38.41569519042969
+pre_update1001_train_batch	detached_raw	9	forward.innovation_memory	nan	nan	nan	20.908818434879343	21.381425857543945
+pre_update1001_train_batch	detached_raw	9	forward.logits	nan	nan	nan	6.700761927692845	16.50067901611328
+pre_update1001_train_batch	detached_raw	9	forward.p	nan	nan	nan	0.5751345770158812	3.0373544692993164
+pre_update1001_train_batch	detached_raw	9	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_raw	9	forward.stored_z	nan	nan	nan	1.0	5.196300506591797
+pre_update1001_train_batch	detached_raw	10	forward.decoded_hidden	nan	nan	nan	2.4588462651579936	28.882156372070312
+pre_update1001_train_batch	detached_raw	10	forward.innovation_delta	nan	nan	nan	7.1442336116429015	37.64849853515625
+pre_update1001_train_batch	detached_raw	10	forward.innovation_memory	nan	nan	nan	20.914257083291886	21.111358642578125
+pre_update1001_train_batch	detached_raw	10	forward.logits	nan	nan	nan	6.683556038531339	16.42282485961914
+pre_update1001_train_batch	detached_raw	10	forward.p	nan	nan	nan	0.5752220603883492	3.015056610107422
+pre_update1001_train_batch	detached_raw	10	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_raw	10	forward.stored_z	nan	nan	nan	0.9999999403953561	5.1958112716674805
+pre_update1001_train_batch	detached_raw	11	forward.decoded_hidden	nan	nan	nan	2.46012348004864	28.8520565032959
+pre_update1001_train_batch	detached_raw	11	forward.innovation_delta	nan	nan	nan	7.145592098094164	37.33666229248047
+pre_update1001_train_batch	detached_raw	11	forward.innovation_memory	nan	nan	nan	20.91679812043814	20.99589729309082
+pre_update1001_train_batch	detached_raw	11	forward.logits	nan	nan	nan	6.662313906059348	16.46710777282715
+pre_update1001_train_batch	detached_raw	11	forward.p	nan	nan	nan	0.5752627254058233	3.0045199394226074
+pre_update1001_train_batch	detached_raw	11	forward.stored_memory	nan	nan	nan	0.9999999850988391	1.0000001192092896
+pre_update1001_train_batch	detached_raw	11	forward.stored_z	nan	nan	nan	0.9999999403953552	5.195621013641357
+pre_update1001_train_batch	detached_raw	12	forward.decoded_hidden	nan	nan	nan	2.461318306470845	28.83980941772461
+pre_update1001_train_batch	detached_raw	12	forward.innovation_delta	nan	nan	nan	7.1462432155575035	37.22085189819336
+pre_update1001_train_batch	detached_raw	12	forward.innovation_memory	nan	nan	nan	20.91801834221256	20.953479766845703
+pre_update1001_train_batch	detached_raw	12	forward.logits	nan	nan	nan	6.640624136384028	16.4742488861084
+pre_update1001_train_batch	detached_raw	12	forward.p	nan	nan	nan	0.5752821415769331	3.0004358291625977
+pre_update1001_train_batch	detached_raw	12	forward.stored_memory	nan	nan	nan	1.0	1.0
+pre_update1001_train_batch	detached_raw	12	forward.stored_z	nan	nan	nan	0.9999999254941944	5.195514678955078
+pre_update1001_train_batch	detached_raw	13	forward.decoded_hidden	nan	nan	nan	2.46244788620798	28.83771324157715
+pre_update1001_train_batch	detached_raw	13	forward.innovation_delta	nan	nan	nan	7.146544099055494	37.16938781738281
+pre_update1001_train_batch	detached_raw	13	forward.innovation_memory	nan	nan	nan	20.91858291650124	20.934850692749023
+pre_update1001_train_batch	detached_raw	13	forward.logits	nan	nan	nan	6.620085116559009	16.350812911987305
+pre_update1001_train_batch	detached_raw	13	forward.p	nan	nan	nan	0.5752911269687204	2.9986214637756348
+pre_update1001_train_batch	detached_raw	13	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_raw	13	forward.stored_z	nan	nan	nan	0.9999999254941944	5.195461750030518
+pre_update1001_train_batch	detached_raw	14	forward.decoded_hidden	nan	nan	nan	2.463559662783802	28.84489631652832
+pre_update1001_train_batch	detached_raw	14	forward.innovation_delta	nan	nan	nan	7.146682024044902	37.14574432373047
+pre_update1001_train_batch	detached_raw	14	forward.innovation_memory	nan	nan	nan	20.91884088521289	20.926349639892578
+pre_update1001_train_batch	detached_raw	14	forward.logits	nan	nan	nan	6.6020026603928565	16.1766300201416
+pre_update1001_train_batch	detached_raw	14	forward.p	nan	nan	nan	0.575295269489773	2.9977946281433105
+pre_update1001_train_batch	detached_raw	14	forward.stored_memory	nan	nan	nan	0.9999999850988391	1.0000001192092896
+pre_update1001_train_batch	detached_raw	14	forward.stored_z	nan	nan	nan	0.9999999403953552	5.195435523986816
+pre_update1001_train_batch	detached_raw	15	forward.decoded_hidden	nan	nan	nan	2.4647188108390203	28.856008529663086
+pre_update1001_train_batch	detached_raw	15	forward.innovation_delta	nan	nan	nan	7.146745920190616	37.13480758666992
+pre_update1001_train_batch	detached_raw	15	forward.innovation_memory	nan	nan	nan	20.918961048137454	20.922420501708984
+pre_update1001_train_batch	detached_raw	15	forward.logits	nan	nan	nan	6.5875036783331264	16.127487182617188
+pre_update1001_train_batch	detached_raw	15	forward.p	nan	nan	nan	0.5752971768380246	2.9974136352539062
+pre_update1001_train_batch	detached_raw	15	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_raw	15	forward.stored_z	nan	nan	nan	0.9999999254941944	5.1954216957092285
+pre_update1001_train_batch	detached_raw	16	forward.decoded_hidden	nan	nan	nan	2.4659285459904745	28.85869598388672
+pre_update1001_train_batch	detached_raw	16	forward.innovation_delta	nan	nan	nan	7.146775484087043	37.129756927490234
+pre_update1001_train_batch	detached_raw	16	forward.innovation_memory	nan	nan	nan	20.919015884401762	20.92060661315918
+pre_update1001_train_batch	detached_raw	16	forward.logits	nan	nan	nan	6.575164659592921	16.027690887451172
+pre_update1001_train_batch	detached_raw	16	forward.p	nan	nan	nan	0.5752980411052913	2.9972376823425293
+pre_update1001_train_batch	detached_raw	16	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_raw	16	forward.stored_z	nan	nan	nan	0.9999999403953552	5.1954169273376465
+pre_update1001_train_batch	attached_sqrt	0	all	3.1854991503059864	12.737664619750555	0.1836369881050662		
+pre_update1001_train_batch	attached_sqrt	0	central.hidden_phase	3.1854991503059864	0.003735509306952127	0.0076943007241922915		
+pre_update1001_train_batch	attached_sqrt	0	central.key	3.1854991503059864	0.17959752110494162	0.005984431820595687		
+pre_update1001_train_batch	attached_sqrt	0	central.memory_phase	3.1854991503059864	0.0077785842151647635	0.009248247072740301		
+pre_update1001_train_batch	attached_sqrt	0	central.output	3.1854991503059864	12.212889219424595	0.5302640239898437		
+pre_update1001_train_batch	attached_sqrt	0	central.query	3.1854991503059864	0.2759334949060184	0.008766581485336138		
+pre_update1001_train_batch	attached_sqrt	0	central.value	3.1854991503059864	0.3747728772601837	0.01945724151280959		
+pre_update1001_train_batch	attached_sqrt	0	revblock0.attn.proj	3.1854991503059864	0.003208790262558339	1.2044311359386914		
+pre_update1001_train_batch	attached_sqrt	0	revblock0.attn.qkv	3.1854991503059864	0.0027364286532257976	1.3427446450416294		
+pre_update1001_train_batch	attached_sqrt	0	revblock0.ffn	3.1854991503059864	0.2854117185459113	0.00922274863523074		
+pre_update1001_train_batch	attached_sqrt	0	revblock0.norm1	3.1854991503059864	0.00010281027630023692	1.640047600415556		
+pre_update1001_train_batch	attached_sqrt	0	revblock0.norm2	3.1854991503059864	0.029676426528878665	0.009710265667535363		
+pre_update1001_train_batch	attached_sqrt	0	revblock1.attn.proj	3.1854991503059864	2.9989388496496536	0.20541559159804668		
+pre_update1001_train_batch	attached_sqrt	0	revblock1.attn.qkv	3.1854991503059864	1.926541996434513	0.07341695447717161		
+pre_update1001_train_batch	attached_sqrt	0	revblock1.ffn	3.1854991503059864	0.23694676103337697	0.019488144167277104		
+pre_update1001_train_batch	attached_sqrt	0	revblock1.norm1	3.1854991503059864	0.028257986867288643	0.030637759216192523		
+pre_update1001_train_batch	attached_sqrt	0	revblock1.norm2	3.1854991503059864	0.003773924487892995	0.0156779979865547		
+pre_update1001_train_batch	attached_sqrt	1	loss_only	2.9898316860198975	nan	nan		
+pre_update1001_train_batch	attached_sqrt	2	loss_only	3.185628652572632	nan	nan		
+pre_update1001_train_batch	attached_sqrt	3	loss_only	3.1590105295181274	nan	nan		
+pre_update1001_train_batch	attached_sqrt	4	loss_only	3.141718029975891	nan	nan		
+pre_update1001_train_batch	attached_sqrt	5	loss_only	3.196252703666687	nan	nan		
+pre_update1001_train_batch	attached_sqrt	6	loss_only	3.2403405904769897	nan	nan		
+pre_update1001_train_batch	attached_sqrt	7	loss_only	3.1916202902793884	nan	nan		
+pre_update1001_train_batch	attached_sqrt	8	loss_only	3.218062162399292	nan	nan		
+pre_update1001_train_batch	attached_sqrt	9	loss_only	3.245378792285919	nan	nan		
+pre_update1001_train_batch	attached_sqrt	10	loss_only	3.2050918340682983	nan	nan		
+pre_update1001_train_batch	attached_sqrt	11	loss_only	3.2413079142570496	nan	nan		
+pre_update1001_train_batch	attached_sqrt	12	loss_only	3.0984736680984497	nan	nan		
+pre_update1001_train_batch	attached_sqrt	13	loss_only	3.250247001647949	nan	nan		
+pre_update1001_train_batch	attached_sqrt	14	loss_only	3.1858628392219543	nan	nan		
+pre_update1001_train_batch	attached_sqrt	15	loss_only	3.2132418155670166	nan	nan		
+pre_update1001_train_batch	attached_sqrt	16	loss_only	3.2059178948402405	nan	nan		
+pre_update1001_train_batch	attached_sqrt	1	forward.decoded_hidden	nan	nan	nan	3.335442244472333	43.7772331237793
+pre_update1001_train_batch	attached_sqrt	1	forward.innovation_delta	nan	nan	nan	3633.3197307269647	270245.375
+pre_update1001_train_batch	attached_sqrt	1	forward.innovation_memory	nan	nan	nan	398.0749242926397	4194.88232421875
+pre_update1001_train_batch	attached_sqrt	1	forward.logits	nan	nan	nan	15.834646263211345	128.36947631835938
+pre_update1001_train_batch	attached_sqrt	1	forward.p	nan	nan	nan	1.9428317403269797	30.41196060180664
+pre_update1001_train_batch	attached_sqrt	1	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_sqrt	1	forward.stored_z	nan	nan	nan	0.9999991059306357	5.8408355712890625
+pre_update1001_train_batch	attached_sqrt	2	forward.decoded_hidden	nan	nan	nan	2.606739454479133	30.24394416809082
+pre_update1001_train_batch	attached_sqrt	2	forward.innovation_delta	nan	nan	nan	107.75452809717424	14573.38671875
+pre_update1001_train_batch	attached_sqrt	2	forward.innovation_memory	nan	nan	nan	40.44389783682309	533.8905029296875
+pre_update1001_train_batch	attached_sqrt	2	forward.logits	nan	nan	nan	8.289382875996797	54.735172271728516
+pre_update1001_train_batch	attached_sqrt	2	forward.p	nan	nan	nan	0.7317378900850802	10.304068565368652
+pre_update1001_train_batch	attached_sqrt	2	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_sqrt	2	forward.stored_z	nan	nan	nan	0.9999998360872405	5.704294204711914
+pre_update1001_train_batch	attached_sqrt	3	forward.decoded_hidden	nan	nan	nan	2.3575572211413007	29.743940353393555
+pre_update1001_train_batch	attached_sqrt	3	forward.innovation_delta	nan	nan	nan	39.552189973149645	6001.0546875
+pre_update1001_train_batch	attached_sqrt	3	forward.innovation_memory	nan	nan	nan	12.538097536608744	288.0091552734375
+pre_update1001_train_batch	attached_sqrt	3	forward.logits	nan	nan	nan	7.404189380000443	43.82587814331055
+pre_update1001_train_batch	attached_sqrt	3	forward.p	nan	nan	nan	0.37321605878436354	7.714913845062256
+pre_update1001_train_batch	attached_sqrt	3	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_sqrt	3	forward.stored_z	nan	nan	nan	0.999947042760419	5.34800910949707
+pre_update1001_train_batch	attached_sqrt	4	forward.decoded_hidden	nan	nan	nan	2.3116370081143653	28.75078773498535
+pre_update1001_train_batch	attached_sqrt	4	forward.innovation_delta	nan	nan	nan	0.9781415183192994	42.98668670654297
+pre_update1001_train_batch	attached_sqrt	4	forward.innovation_memory	nan	nan	nan	5.40874815043964	19.032835006713867
+pre_update1001_train_batch	attached_sqrt	4	forward.logits	nan	nan	nan	7.318094440807149	21.12123680114746
+pre_update1001_train_batch	attached_sqrt	4	forward.p	nan	nan	nan	0.29099124490646616	2.5726752281188965
+pre_update1001_train_batch	attached_sqrt	4	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_sqrt	4	forward.stored_z	nan	nan	nan	0.9999960660954139	5.404894828796387
+pre_update1001_train_batch	attached_sqrt	5	forward.decoded_hidden	nan	nan	nan	2.2977415125943415	28.126995086669922
+pre_update1001_train_batch	attached_sqrt	5	forward.innovation_delta	nan	nan	nan	0.6493716597577099	4.943803787231445
+pre_update1001_train_batch	attached_sqrt	5	forward.innovation_memory	nan	nan	nan	4.209977579324013	5.274284839630127
+pre_update1001_train_batch	attached_sqrt	5	forward.logits	nan	nan	nan	7.285573225112247	19.71096420288086
+pre_update1001_train_batch	attached_sqrt	5	forward.p	nan	nan	nan	0.2577276434404126	1.4680685997009277
+pre_update1001_train_batch	attached_sqrt	5	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0000001192092896
+pre_update1001_train_batch	attached_sqrt	5	forward.stored_z	nan	nan	nan	0.9999951869249445	5.2513017654418945
+pre_update1001_train_batch	attached_sqrt	6	forward.decoded_hidden	nan	nan	nan	2.2900502695764438	27.803550720214844
+pre_update1001_train_batch	attached_sqrt	6	forward.innovation_delta	nan	nan	nan	0.4949080412896277	2.875638246536255
+pre_update1001_train_batch	attached_sqrt	6	forward.innovation_memory	nan	nan	nan	3.513691928581324	3.760965585708618
+pre_update1001_train_batch	attached_sqrt	6	forward.logits	nan	nan	nan	7.268566208742907	18.91158103942871
+pre_update1001_train_batch	attached_sqrt	6	forward.p	nan	nan	nan	0.23568582919398695	1.2777087688446045
+pre_update1001_train_batch	attached_sqrt	6	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0
+pre_update1001_train_batch	attached_sqrt	6	forward.stored_z	nan	nan	nan	0.9999913126230243	5.20607852935791
+pre_update1001_train_batch	attached_sqrt	7	forward.decoded_hidden	nan	nan	nan	2.2850293938843276	27.613632202148438
+pre_update1001_train_batch	attached_sqrt	7	forward.innovation_delta	nan	nan	nan	0.3959236961474593	2.1609625816345215
+pre_update1001_train_batch	attached_sqrt	7	forward.innovation_memory	nan	nan	nan	3.025319268123166	3.120680332183838
+pre_update1001_train_batch	attached_sqrt	7	forward.logits	nan	nan	nan	7.270628121547067	18.64661979675293
+pre_update1001_train_batch	attached_sqrt	7	forward.p	nan	nan	nan	0.2187778507560514	1.1618931293487549
+pre_update1001_train_batch	attached_sqrt	7	forward.stored_memory	nan	nan	nan	0.9999998807907104	1.0
+pre_update1001_train_batch	attached_sqrt	7	forward.stored_z	nan	nan	nan	0.9999856054782872	5.202225208282471
+pre_update1001_train_batch	attached_sqrt	8	forward.decoded_hidden	nan	nan	nan	2.2815837063397857	27.37649917602539
+pre_update1001_train_batch	attached_sqrt	8	forward.innovation_delta	nan	nan	nan	0.3266823824942406	1.7339617013931274
+pre_update1001_train_batch	attached_sqrt	8	forward.innovation_memory	nan	nan	nan	2.6587861803444865	2.696178674697876
+pre_update1001_train_batch	attached_sqrt	8	forward.logits	nan	nan	nan	7.290869114179091	18.618183135986328
+pre_update1001_train_batch	attached_sqrt	8	forward.p	nan	nan	nan	0.20514560496550335	1.0788670778274536
+pre_update1001_train_batch	attached_sqrt	8	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_sqrt	8	forward.stored_z	nan	nan	nan	0.9999777674674988	5.201668739318848
+pre_update1001_train_batch	attached_sqrt	9	forward.decoded_hidden	nan	nan	nan	2.2790102894720725	27.1461181640625
+pre_update1001_train_batch	attached_sqrt	9	forward.innovation_delta	nan	nan	nan	0.27580598006504264	1.4465668201446533
+pre_update1001_train_batch	attached_sqrt	9	forward.innovation_memory	nan	nan	nan	2.3726602202272526	2.388021469116211
+pre_update1001_train_batch	attached_sqrt	9	forward.logits	nan	nan	nan	7.310822704365589	18.461162567138672
+pre_update1001_train_batch	attached_sqrt	9	forward.p	nan	nan	nan	0.19382582608771998	1.0147292613983154
+pre_update1001_train_batch	attached_sqrt	9	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0000001192092896
+pre_update1001_train_batch	attached_sqrt	9	forward.stored_z	nan	nan	nan	0.9999674558639526	5.201433181762695
+pre_update1001_train_batch	attached_sqrt	10	forward.decoded_hidden	nan	nan	nan	2.276776530827981	27.162052154541016
+pre_update1001_train_batch	attached_sqrt	10	forward.innovation_delta	nan	nan	nan	0.23711421346672718	1.2372241020202637
+pre_update1001_train_batch	attached_sqrt	10	forward.innovation_memory	nan	nan	nan	2.1430838111664987	2.149744987487793
+pre_update1001_train_batch	attached_sqrt	10	forward.logits	nan	nan	nan	7.31482476965335	18.063980102539062
+pre_update1001_train_batch	attached_sqrt	10	forward.p	nan	nan	nan	0.18423458190842618	0.9624766111373901
+pre_update1001_train_batch	attached_sqrt	10	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	attached_sqrt	10	forward.stored_z	nan	nan	nan	0.9999545216560373	5.201377868652344
+pre_update1001_train_batch	attached_sqrt	11	forward.decoded_hidden	nan	nan	nan	2.274829918400422	27.182308197021484
+pre_update1001_train_batch	attached_sqrt	11	forward.innovation_delta	nan	nan	nan	0.20688552411995842	1.0769920349121094
+pre_update1001_train_batch	attached_sqrt	11	forward.innovation_memory	nan	nan	nan	1.9548917414311422	1.9579309225082397
+pre_update1001_train_batch	attached_sqrt	11	forward.logits	nan	nan	nan	7.306550979855334	17.80621337890625
+pre_update1001_train_batch	attached_sqrt	11	forward.p	nan	nan	nan	0.1759794764304115	0.9184432625770569
+pre_update1001_train_batch	attached_sqrt	11	forward.stored_memory	nan	nan	nan	0.9999999254941944	1.0
+pre_update1001_train_batch	attached_sqrt	11	forward.stored_z	nan	nan	nan	0.9999386817216876	5.201466083526611
+pre_update1001_train_batch	attached_sqrt	12	forward.decoded_hidden	nan	nan	nan	2.2731983582929565	27.20800018310547
+pre_update1001_train_batch	attached_sqrt	12	forward.innovation_delta	nan	nan	nan	0.18273910880960542	0.9502573013305664
+pre_update1001_train_batch	attached_sqrt	12	forward.innovation_memory	nan	nan	nan	1.797876328284707	1.7993299961090088
+pre_update1001_train_batch	attached_sqrt	12	forward.logits	nan	nan	nan	7.294832900659378	17.68842315673828
+pre_update1001_train_batch	attached_sqrt	12	forward.p	nan	nan	nan	0.1687815152138991	0.8804763555526733
+pre_update1001_train_batch	attached_sqrt	12	forward.stored_memory	nan	nan	nan	0.9999998807907104	1.0
+pre_update1001_train_batch	attached_sqrt	12	forward.stored_z	nan	nan	nan	0.999919876456261	5.2016472816467285
+pre_update1001_train_batch	attached_sqrt	13	forward.decoded_hidden	nan	nan	nan	2.2718296178271995	27.233095169067383
+pre_update1001_train_batch	attached_sqrt	13	forward.innovation_delta	nan	nan	nan	0.16308823228148592	0.8476299047470093
+pre_update1001_train_batch	attached_sqrt	13	forward.innovation_memory	nan	nan	nan	1.6649121344269593	1.665683627128601
+pre_update1001_train_batch	attached_sqrt	13	forward.logits	nan	nan	nan	7.283700528222308	17.729028701782227
+pre_update1001_train_batch	attached_sqrt	13	forward.p	nan	nan	nan	0.16243599727855368	0.8471660614013672
+pre_update1001_train_batch	attached_sqrt	13	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0
+pre_update1001_train_batch	attached_sqrt	13	forward.stored_z	nan	nan	nan	0.9998975694179539	5.20188045501709
+pre_update1001_train_batch	attached_sqrt	14	forward.decoded_hidden	nan	nan	nan	2.2707092232847783	27.25355339050293
+pre_update1001_train_batch	attached_sqrt	14	forward.innovation_delta	nan	nan	nan	0.14683963731009322	0.7630013227462769
+pre_update1001_train_batch	attached_sqrt	14	forward.innovation_memory	nan	nan	nan	1.550876975065172	1.5513118505477905
+pre_update1001_train_batch	attached_sqrt	14	forward.logits	nan	nan	nan	7.274476614497449	17.95953369140625
+pre_update1001_train_batch	attached_sqrt	14	forward.p	nan	nan	nan	0.15678896009959628	0.8176012635231018
+pre_update1001_train_batch	attached_sqrt	14	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0
+pre_update1001_train_batch	attached_sqrt	14	forward.stored_z	nan	nan	nan	0.9998717755079273	5.2021355628967285
+pre_update1001_train_batch	attached_sqrt	15	forward.decoded_hidden	nan	nan	nan	2.269853757856336	27.266117095947266
+pre_update1001_train_batch	attached_sqrt	15	forward.innovation_delta	nan	nan	nan	0.13321922719500692	0.692125678062439
+pre_update1001_train_batch	attached_sqrt	15	forward.innovation_memory	nan	nan	nan	1.452001184226906	1.4522429704666138
+pre_update1001_train_batch	attached_sqrt	15	forward.logits	nan	nan	nan	7.2684010249426665	18.01976776123047
+pre_update1001_train_batch	attached_sqrt	15	forward.p	nan	nan	nan	0.15172241255654206	0.79112708568573
+pre_update1001_train_batch	attached_sqrt	15	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0
+pre_update1001_train_batch	attached_sqrt	15	forward.stored_z	nan	nan	nan	0.9998424500226987	5.202388763427734
+pre_update1001_train_batch	attached_sqrt	16	forward.decoded_hidden	nan	nan	nan	2.2692018940375607	27.272178649902344
+pre_update1001_train_batch	attached_sqrt	16	forward.innovation_delta	nan	nan	nan	0.12166530825203621	0.6320421695709229
+pre_update1001_train_batch	attached_sqrt	16	forward.innovation_memory	nan	nan	nan	1.3654503822332307	1.365584373474121
+pre_update1001_train_batch	attached_sqrt	16	forward.logits	nan	nan	nan	7.263507988393143	17.78392219543457
+pre_update1001_train_batch	attached_sqrt	16	forward.p	nan	nan	nan	0.14714424312119168	0.767235517501831
+pre_update1001_train_batch	attached_sqrt	16	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0
+pre_update1001_train_batch	attached_sqrt	16	forward.stored_z	nan	nan	nan	0.9998093247413635	5.202630519866943
+pre_update1001_train_batch	detached_sqrt	0	all	3.185499180108309	12.74909096497764	0.18380171999942752		
+pre_update1001_train_batch	detached_sqrt	0	central.hidden_phase	3.185499180108309	0.0034375735432170406	0.007080620721199586		
+pre_update1001_train_batch	detached_sqrt	0	central.key	3.185499180108309	0.16990342533316777	0.005661411464570799		
+pre_update1001_train_batch	detached_sqrt	0	central.memory_phase	3.185499180108309	0.005077993624505422	0.006037414826938585		
+pre_update1001_train_batch	detached_sqrt	0	central.output	3.185499180108309	12.226991805562038	0.5308763356173012		
+pre_update1001_train_batch	detached_sqrt	0	central.query	3.185499180108309	0.2362652529480268	0.00750629637343551		
+pre_update1001_train_batch	detached_sqrt	0	central.value	3.185499180108309	0.3640406884466296	0.018900053940344403		
+pre_update1001_train_batch	detached_sqrt	0	revblock0.attn.proj	3.185499180108309	0.0032087904042775862	1.204431189133528		
+pre_update1001_train_batch	detached_sqrt	0	revblock0.attn.qkv	3.185499180108309	0.002736428570134401	1.3427446042693156		
+pre_update1001_train_batch	detached_sqrt	0	revblock0.ffn	3.185499180108309	0.2768496188129355	0.00894607431355495		
+pre_update1001_train_batch	detached_sqrt	0	revblock0.norm1	3.185499180108309	8.327577893140869e-05	1.3284298644461323		
+pre_update1001_train_batch	detached_sqrt	0	revblock0.norm2	3.185499180108309	0.029756621270273797	0.009736505762289637		
+pre_update1001_train_batch	detached_sqrt	0	revblock1.attn.proj	3.185499180108309	2.999115972603671	0.20542772382821514		
+pre_update1001_train_batch	detached_sqrt	0	revblock1.attn.qkv	3.185499180108309	1.9251605227038835	0.07336430906680384		
+pre_update1001_train_batch	detached_sqrt	0	revblock1.ffn	3.185499180108309	0.20910609201636923	0.01719833455286982		
+pre_update1001_train_batch	detached_sqrt	0	revblock1.norm1	3.185499180108309	0.022687706659774116	0.024598372738803026		
+pre_update1001_train_batch	detached_sqrt	0	revblock1.norm2	3.185499180108309	0.0033832251977247295	0.01405491763498512		
+pre_update1001_train_batch	detached_sqrt	1	loss_only	2.9898316860198975	nan	nan		
+pre_update1001_train_batch	detached_sqrt	2	loss_only	3.1856287121772766	nan	nan		
+pre_update1001_train_batch	detached_sqrt	3	loss_only	3.1590105295181274	nan	nan		
+pre_update1001_train_batch	detached_sqrt	4	loss_only	3.141718029975891	nan	nan		
+pre_update1001_train_batch	detached_sqrt	5	loss_only	3.196252703666687	nan	nan		
+pre_update1001_train_batch	detached_sqrt	6	loss_only	3.2403405904769897	nan	nan		
+pre_update1001_train_batch	detached_sqrt	7	loss_only	3.1916202902793884	nan	nan		
+pre_update1001_train_batch	detached_sqrt	8	loss_only	3.2180623412132263	nan	nan		
+pre_update1001_train_batch	detached_sqrt	9	loss_only	3.245378792285919	nan	nan		
+pre_update1001_train_batch	detached_sqrt	10	loss_only	3.2050918340682983	nan	nan		
+pre_update1001_train_batch	detached_sqrt	11	loss_only	3.2413079738616943	nan	nan		
+pre_update1001_train_batch	detached_sqrt	12	loss_only	3.0984736680984497	nan	nan		
+pre_update1001_train_batch	detached_sqrt	13	loss_only	3.250247001647949	nan	nan		
+pre_update1001_train_batch	detached_sqrt	14	loss_only	3.185862898826599	nan	nan		
+pre_update1001_train_batch	detached_sqrt	15	loss_only	3.213241934776306	nan	nan		
+pre_update1001_train_batch	detached_sqrt	16	loss_only	3.2059178948402405	nan	nan		
+pre_update1001_train_batch	detached_sqrt	1	forward.decoded_hidden	nan	nan	nan	3.335442244472333	43.7772331237793
+pre_update1001_train_batch	detached_sqrt	1	forward.innovation_delta	nan	nan	nan	3633.3197307269647	270245.375
+pre_update1001_train_batch	detached_sqrt	1	forward.innovation_memory	nan	nan	nan	398.0749242926397	4194.88232421875
+pre_update1001_train_batch	detached_sqrt	1	forward.logits	nan	nan	nan	15.834646263211345	128.36947631835938
+pre_update1001_train_batch	detached_sqrt	1	forward.p	nan	nan	nan	1.9428317403269797	30.41196060180664
+pre_update1001_train_batch	detached_sqrt	1	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_sqrt	1	forward.stored_z	nan	nan	nan	0.9999991059306357	5.8408355712890625
+pre_update1001_train_batch	detached_sqrt	2	forward.decoded_hidden	nan	nan	nan	2.606739394631092	30.243942260742188
+pre_update1001_train_batch	detached_sqrt	2	forward.innovation_delta	nan	nan	nan	107.75452809717424	14573.38671875
+pre_update1001_train_batch	detached_sqrt	2	forward.innovation_memory	nan	nan	nan	40.44389783682309	533.8905029296875
+pre_update1001_train_batch	detached_sqrt	2	forward.logits	nan	nan	nan	8.289382875996797	54.73516845703125
+pre_update1001_train_batch	detached_sqrt	2	forward.p	nan	nan	nan	0.7317378900850802	10.304068565368652
+pre_update1001_train_batch	detached_sqrt	2	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_sqrt	2	forward.stored_z	nan	nan	nan	0.9999998360872405	5.704294204711914
+pre_update1001_train_batch	detached_sqrt	3	forward.decoded_hidden	nan	nan	nan	2.3575572211413007	29.743938446044922
+pre_update1001_train_batch	detached_sqrt	3	forward.innovation_delta	nan	nan	nan	39.552189973149645	6001.0546875
+pre_update1001_train_batch	detached_sqrt	3	forward.innovation_memory	nan	nan	nan	12.538097536608744	288.0091552734375
+pre_update1001_train_batch	detached_sqrt	3	forward.logits	nan	nan	nan	7.404189380000443	43.82587814331055
+pre_update1001_train_batch	detached_sqrt	3	forward.p	nan	nan	nan	0.37321605878436354	7.714913845062256
+pre_update1001_train_batch	detached_sqrt	3	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_sqrt	3	forward.stored_z	nan	nan	nan	0.999947042760419	5.34800910949707
+pre_update1001_train_batch	detached_sqrt	4	forward.decoded_hidden	nan	nan	nan	2.3116370081143653	28.75078773498535
+pre_update1001_train_batch	detached_sqrt	4	forward.innovation_delta	nan	nan	nan	0.9781415183192994	42.98668670654297
+pre_update1001_train_batch	detached_sqrt	4	forward.innovation_memory	nan	nan	nan	5.40874815043964	19.032835006713867
+pre_update1001_train_batch	detached_sqrt	4	forward.logits	nan	nan	nan	7.318094440807149	21.12123680114746
+pre_update1001_train_batch	detached_sqrt	4	forward.p	nan	nan	nan	0.29099124490646616	2.5726752281188965
+pre_update1001_train_batch	detached_sqrt	4	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_sqrt	4	forward.stored_z	nan	nan	nan	0.9999960660954139	5.404894828796387
+pre_update1001_train_batch	detached_sqrt	5	forward.decoded_hidden	nan	nan	nan	2.2977414533443885	28.126995086669922
+pre_update1001_train_batch	detached_sqrt	5	forward.innovation_delta	nan	nan	nan	0.6493716597577099	4.943803787231445
+pre_update1001_train_batch	detached_sqrt	5	forward.innovation_memory	nan	nan	nan	4.209977579324013	5.274284839630127
+pre_update1001_train_batch	detached_sqrt	5	forward.logits	nan	nan	nan	7.285573225112247	19.710968017578125
+pre_update1001_train_batch	detached_sqrt	5	forward.p	nan	nan	nan	0.2577276434404126	1.4680685997009277
+pre_update1001_train_batch	detached_sqrt	5	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0000001192092896
+pre_update1001_train_batch	detached_sqrt	5	forward.stored_z	nan	nan	nan	0.9999951869249445	5.2513017654418945
+pre_update1001_train_batch	detached_sqrt	6	forward.decoded_hidden	nan	nan	nan	2.2900502695764438	27.803550720214844
+pre_update1001_train_batch	detached_sqrt	6	forward.innovation_delta	nan	nan	nan	0.4949080412896277	2.875638246536255
+pre_update1001_train_batch	detached_sqrt	6	forward.innovation_memory	nan	nan	nan	3.513691928581324	3.760965585708618
+pre_update1001_train_batch	detached_sqrt	6	forward.logits	nan	nan	nan	7.268566208742907	18.91158103942871
+pre_update1001_train_batch	detached_sqrt	6	forward.p	nan	nan	nan	0.23568582919398695	1.2777087688446045
+pre_update1001_train_batch	detached_sqrt	6	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0
+pre_update1001_train_batch	detached_sqrt	6	forward.stored_z	nan	nan	nan	0.9999913126230243	5.20607852935791
+pre_update1001_train_batch	detached_sqrt	7	forward.decoded_hidden	nan	nan	nan	2.2850293938843276	27.613632202148438
+pre_update1001_train_batch	detached_sqrt	7	forward.innovation_delta	nan	nan	nan	0.3959236961474593	2.1609625816345215
+pre_update1001_train_batch	detached_sqrt	7	forward.innovation_memory	nan	nan	nan	3.025319268123166	3.120680332183838
+pre_update1001_train_batch	detached_sqrt	7	forward.logits	nan	nan	nan	7.270628242015686	18.64661979675293
+pre_update1001_train_batch	detached_sqrt	7	forward.p	nan	nan	nan	0.2187778507560514	1.1618931293487549
+pre_update1001_train_batch	detached_sqrt	7	forward.stored_memory	nan	nan	nan	0.9999998807907104	1.0
+pre_update1001_train_batch	detached_sqrt	7	forward.stored_z	nan	nan	nan	0.9999856054782872	5.202225208282471
+pre_update1001_train_batch	detached_sqrt	8	forward.decoded_hidden	nan	nan	nan	2.2815837063397857	27.37649917602539
+pre_update1001_train_batch	detached_sqrt	8	forward.innovation_delta	nan	nan	nan	0.3266823824942406	1.7339617013931274
+pre_update1001_train_batch	detached_sqrt	8	forward.innovation_memory	nan	nan	nan	2.6587861803444865	2.696178674697876
+pre_update1001_train_batch	detached_sqrt	8	forward.logits	nan	nan	nan	7.290869234726066	18.618183135986328
+pre_update1001_train_batch	detached_sqrt	8	forward.p	nan	nan	nan	0.20514560496550335	1.0788670778274536
+pre_update1001_train_batch	detached_sqrt	8	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_sqrt	8	forward.stored_z	nan	nan	nan	0.9999777674674988	5.201668739318848
+pre_update1001_train_batch	detached_sqrt	9	forward.decoded_hidden	nan	nan	nan	2.2790102894720725	27.1461181640625
+pre_update1001_train_batch	detached_sqrt	9	forward.innovation_delta	nan	nan	nan	0.27580598006504264	1.4465668201446533
+pre_update1001_train_batch	detached_sqrt	9	forward.innovation_memory	nan	nan	nan	2.3726602202272526	2.388021469116211
+pre_update1001_train_batch	detached_sqrt	9	forward.logits	nan	nan	nan	7.310822823187492	18.461162567138672
+pre_update1001_train_batch	detached_sqrt	9	forward.p	nan	nan	nan	0.19382582608771998	1.0147292613983154
+pre_update1001_train_batch	detached_sqrt	9	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0000001192092896
+pre_update1001_train_batch	detached_sqrt	9	forward.stored_z	nan	nan	nan	0.9999674558639526	5.201433181762695
+pre_update1001_train_batch	detached_sqrt	10	forward.decoded_hidden	nan	nan	nan	2.276776471812956	27.162052154541016
+pre_update1001_train_batch	detached_sqrt	10	forward.innovation_delta	nan	nan	nan	0.23711421346672718	1.2372241020202637
+pre_update1001_train_batch	detached_sqrt	10	forward.innovation_memory	nan	nan	nan	2.1430838111664987	2.149744987487793
+pre_update1001_train_batch	detached_sqrt	10	forward.logits	nan	nan	nan	7.31482476965335	18.063983917236328
+pre_update1001_train_batch	detached_sqrt	10	forward.p	nan	nan	nan	0.18423458190842618	0.9624766111373901
+pre_update1001_train_batch	detached_sqrt	10	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+pre_update1001_train_batch	detached_sqrt	10	forward.stored_z	nan	nan	nan	0.9999545216560373	5.201377868652344
+pre_update1001_train_batch	detached_sqrt	11	forward.decoded_hidden	nan	nan	nan	2.274829918400422	27.182308197021484
+pre_update1001_train_batch	detached_sqrt	11	forward.innovation_delta	nan	nan	nan	0.20688552411995842	1.0769920349121094
+pre_update1001_train_batch	detached_sqrt	11	forward.innovation_memory	nan	nan	nan	1.9548917414311422	1.9579309225082397
+pre_update1001_train_batch	detached_sqrt	11	forward.logits	nan	nan	nan	7.306551099061491	17.80621337890625
+pre_update1001_train_batch	detached_sqrt	11	forward.p	nan	nan	nan	0.1759794764304115	0.9184432625770569
+pre_update1001_train_batch	detached_sqrt	11	forward.stored_memory	nan	nan	nan	0.9999999254941944	1.0
+pre_update1001_train_batch	detached_sqrt	11	forward.stored_z	nan	nan	nan	0.9999386817216876	5.201466083526611
+pre_update1001_train_batch	detached_sqrt	12	forward.decoded_hidden	nan	nan	nan	2.2731982981170784	27.20800018310547
+pre_update1001_train_batch	detached_sqrt	12	forward.innovation_delta	nan	nan	nan	0.18273910880960542	0.9502573013305664
+pre_update1001_train_batch	detached_sqrt	12	forward.innovation_memory	nan	nan	nan	1.797876328284707	1.7993299961090088
+pre_update1001_train_batch	detached_sqrt	12	forward.logits	nan	nan	nan	7.294832900659378	17.68842315673828
+pre_update1001_train_batch	detached_sqrt	12	forward.p	nan	nan	nan	0.1687815152138991	0.8804763555526733
+pre_update1001_train_batch	detached_sqrt	12	forward.stored_memory	nan	nan	nan	0.9999998807907104	1.0
+pre_update1001_train_batch	detached_sqrt	12	forward.stored_z	nan	nan	nan	0.999919876456261	5.2016472816467285
+pre_update1001_train_batch	detached_sqrt	13	forward.decoded_hidden	nan	nan	nan	2.2718296178271995	27.233095169067383
+pre_update1001_train_batch	detached_sqrt	13	forward.innovation_delta	nan	nan	nan	0.16308823228148592	0.8476299047470093
+pre_update1001_train_batch	detached_sqrt	13	forward.innovation_memory	nan	nan	nan	1.6649121344269593	1.665683627128601
+pre_update1001_train_batch	detached_sqrt	13	forward.logits	nan	nan	nan	7.283700647069914	17.729028701782227
+pre_update1001_train_batch	detached_sqrt	13	forward.p	nan	nan	nan	0.16243599727855368	0.8471660614013672
+pre_update1001_train_batch	detached_sqrt	13	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0
+pre_update1001_train_batch	detached_sqrt	13	forward.stored_z	nan	nan	nan	0.9998975694179539	5.20188045501709
+pre_update1001_train_batch	detached_sqrt	14	forward.decoded_hidden	nan	nan	nan	2.2707092232847783	27.253555297851562
+pre_update1001_train_batch	detached_sqrt	14	forward.innovation_delta	nan	nan	nan	0.14683963731009322	0.7630013227462769
+pre_update1001_train_batch	detached_sqrt	14	forward.innovation_memory	nan	nan	nan	1.550876975065172	1.5513118505477905
+pre_update1001_train_batch	detached_sqrt	14	forward.logits	nan	nan	nan	7.274476495620912	17.959535598754883
+pre_update1001_train_batch	detached_sqrt	14	forward.p	nan	nan	nan	0.15678896009959628	0.8176012635231018
+pre_update1001_train_batch	detached_sqrt	14	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0
+pre_update1001_train_batch	detached_sqrt	14	forward.stored_z	nan	nan	nan	0.9998717755079273	5.2021355628967285
+pre_update1001_train_batch	detached_sqrt	15	forward.decoded_hidden	nan	nan	nan	2.269853757856336	27.2661190032959
+pre_update1001_train_batch	detached_sqrt	15	forward.innovation_delta	nan	nan	nan	0.13321922719500692	0.692125678062439
+pre_update1001_train_batch	detached_sqrt	15	forward.innovation_memory	nan	nan	nan	1.452001184226906	1.4522429704666138
+pre_update1001_train_batch	detached_sqrt	15	forward.logits	nan	nan	nan	7.2684011458340745	18.0197696685791
+pre_update1001_train_batch	detached_sqrt	15	forward.p	nan	nan	nan	0.15172241255654206	0.79112708568573
+pre_update1001_train_batch	detached_sqrt	15	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0
+pre_update1001_train_batch	detached_sqrt	15	forward.stored_z	nan	nan	nan	0.9998424500226987	5.202388763427734
+pre_update1001_train_batch	detached_sqrt	16	forward.decoded_hidden	nan	nan	nan	2.269201954216381	27.272178649902344
+pre_update1001_train_batch	detached_sqrt	16	forward.innovation_delta	nan	nan	nan	0.12166530825203621	0.6320421695709229
+pre_update1001_train_batch	detached_sqrt	16	forward.innovation_memory	nan	nan	nan	1.3654503822332307	1.365584373474121
+pre_update1001_train_batch	detached_sqrt	16	forward.logits	nan	nan	nan	7.263507988393143	17.78392219543457
+pre_update1001_train_batch	detached_sqrt	16	forward.p	nan	nan	nan	0.14714424312119168	0.767235517501831
+pre_update1001_train_batch	detached_sqrt	16	forward.stored_memory	nan	nan	nan	0.9999999403953552	1.0
+pre_update1001_train_batch	detached_sqrt	16	forward.stored_z	nan	nan	nan	0.9998093247413635	5.202630519866943
+post_update1001_same_batch	attached_raw	1	forward.decoded_hidden	nan	nan	nan	3.2769513918451625	44.1830940246582
+post_update1001_same_batch	attached_raw	1	forward.innovation_delta	nan	nan	nan	2667.0391234289045	200951.203125
+post_update1001_same_batch	attached_raw	1	forward.innovation_memory	nan	nan	nan	337.04767658099405	3510.730224609375
+post_update1001_same_batch	attached_raw	1	forward.logits	nan	nan	nan	15.061682800986551	115.81013488769531
+post_update1001_same_batch	attached_raw	1	forward.p	nan	nan	nan	1.8198736731101695	31.07076072692871
+post_update1001_same_batch	attached_raw	1	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+post_update1001_same_batch	attached_raw	1	forward.stored_z	nan	nan	nan	0.9999987334032111	5.75424337387085
+post_update1001_same_batch	attached_raw	2	forward.decoded_hidden	nan	nan	nan	2.7499498948933807	30.604244232177734
+post_update1001_same_batch	attached_raw	2	forward.innovation_delta	nan	nan	nan	87.46380123929957	6093.4384765625
+post_update1001_same_batch	attached_raw	2	forward.innovation_memory	nan	nan	nan	68.43811466797712	217.99688720703125
+post_update1001_same_batch	attached_raw	2	forward.logits	nan	nan	nan	8.350906472852978	68.84343719482422
+post_update1001_same_batch	attached_raw	2	forward.p	nan	nan	nan	0.991674555134732	10.106931686401367
+post_update1001_same_batch	attached_raw	2	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+post_update1001_same_batch	attached_raw	2	forward.stored_z	nan	nan	nan	0.9999999701976781	5.537125587463379
+post_update1001_same_batch	attached_raw	3	forward.decoded_hidden	nan	nan	nan	2.5219586679403228	30.405256271362305
+post_update1001_same_batch	attached_raw	3	forward.innovation_delta	nan	nan	nan	19.366141675515202	2628.3408203125
+post_update1001_same_batch	attached_raw	3	forward.innovation_memory	nan	nan	nan	26.699030038173976	227.2228546142578
+post_update1001_same_batch	attached_raw	3	forward.logits	nan	nan	nan	6.98459980456083	30.46595001220703
+post_update1001_same_batch	attached_raw	3	forward.p	nan	nan	nan	0.636401952312019	7.769940376281738
+post_update1001_same_batch	attached_raw	3	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+post_update1001_same_batch	attached_raw	3	forward.stored_z	nan	nan	nan	0.9999999850988391	5.2591938972473145
+post_update1001_same_batch	attached_raw	4	forward.decoded_hidden	nan	nan	nan	2.495432750114556	29.934846878051758
+post_update1001_same_batch	attached_raw	4	forward.innovation_delta	nan	nan	nan	8.41895945493805	88.95869445800781
+post_update1001_same_batch	attached_raw	4	forward.innovation_memory	nan	nan	nan	22.601609612100546	34.48738098144531
+post_update1001_same_batch	attached_raw	4	forward.logits	nan	nan	nan	6.761799632618841	17.809770584106445
+post_update1001_same_batch	attached_raw	4	forward.p	nan	nan	nan	0.596772100184188	3.795555830001831
+post_update1001_same_batch	attached_raw	4	forward.stored_memory	nan	nan	nan	0.9999999850988391	1.0000001192092896
+post_update1001_same_batch	attached_raw	4	forward.stored_z	nan	nan	nan	0.9999999850988391	5.200193881988525
+post_update1001_same_batch	attached_raw	5	forward.decoded_hidden	nan	nan	nan	2.498614350405018	29.674209594726562
+post_update1001_same_batch	attached_raw	5	forward.innovation_delta	nan	nan	nan	8.49227776458568	54.180206298828125
+post_update1001_same_batch	attached_raw	5	forward.innovation_memory	nan	nan	nan	22.726131773209193	25.530366897583008
+post_update1001_same_batch	attached_raw	5	forward.logits	nan	nan	nan	6.646795389444286	17.31123161315918
+post_update1001_same_batch	attached_raw	5	forward.p	nan	nan	nan	0.5996815890696179	3.329378604888916
+post_update1001_same_batch	attached_raw	5	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+post_update1001_same_batch	attached_raw	5	forward.stored_z	nan	nan	nan	1.0	5.199389457702637
+post_update1001_same_batch	attached_raw	6	forward.decoded_hidden	nan	nan	nan	2.5029907166013787	29.575363159179688
+post_update1001_same_batch	attached_raw	6	forward.innovation_delta	nan	nan	nan	8.640514413670884	49.485877990722656
+post_update1001_same_batch	attached_raw	6	forward.innovation_memory	nan	nan	nan	22.961321950136732	24.30369758605957
+post_update1001_same_batch	attached_raw	6	forward.logits	nan	nan	nan	6.580515640832628	16.897409439086914
+post_update1001_same_batch	attached_raw	6	forward.p	nan	nan	nan	0.6033732917004215	3.2364039421081543
+post_update1001_same_batch	attached_raw	6	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+post_update1001_same_batch	attached_raw	6	forward.stored_z	nan	nan	nan	1.0	5.1967291831970215
+post_update1001_same_batch	attached_raw	7	forward.decoded_hidden	nan	nan	nan	2.5061933144690545	29.538238525390625
+post_update1001_same_batch	attached_raw	7	forward.innovation_delta	nan	nan	nan	8.723718342745897	47.03681182861328
+post_update1001_same_batch	attached_raw	7	forward.innovation_memory	nan	nan	nan	23.09309426383475	23.61347007751465
+post_update1001_same_batch	attached_raw	7	forward.logits	nan	nan	nan	6.546854360108688	16.935779571533203
+post_update1001_same_batch	attached_raw	7	forward.p	nan	nan	nan	0.6053767536299297	3.186136245727539
+post_update1001_same_batch	attached_raw	7	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+post_update1001_same_batch	attached_raw	7	forward.stored_z	nan	nan	nan	1.0	5.194629669189453
+post_update1001_same_batch	attached_raw	8	forward.decoded_hidden	nan	nan	nan	2.5085930636218463	29.467941284179688
+post_update1001_same_batch	attached_raw	8	forward.innovation_delta	nan	nan	nan	8.762121993536544	46.21913146972656
+post_update1001_same_batch	attached_raw	8	forward.innovation_memory	nan	nan	nan	23.153969838795973	23.375591278076172
+post_update1001_same_batch	attached_raw	8	forward.logits	nan	nan	nan	6.530331071723877	16.833641052246094
+post_update1001_same_batch	attached_raw	8	forward.p	nan	nan	nan	0.6062972552087178	3.1685314178466797
+post_update1001_same_batch	attached_raw	8	forward.stored_memory	nan	nan	nan	0.9999999552965168	1.0000001192092896
+post_update1001_same_batch	attached_raw	8	forward.stored_z	nan	nan	nan	1.0	5.193605899810791
+post_update1001_same_batch	attached_raw	9	forward.decoded_hidden	nan	nan	nan	2.5104478512883612	29.376819610595703
+post_update1001_same_batch	attached_raw	9	forward.innovation_delta	nan	nan	nan	8.779080882310218	45.88599395751953
+post_update1001_same_batch	attached_raw	9	forward.innovation_memory	nan	nan	nan	23.1809048791701	23.274215698242188
+post_update1001_same_batch	attached_raw	9	forward.logits	nan	nan	nan	6.516195956804962	16.772130966186523
+post_update1001_same_batch	attached_raw	9	forward.p	nan	nan	nan	0.6067042948032786	3.1607754230499268
+post_update1001_same_batch	attached_raw	9	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+post_update1001_same_batch	attached_raw	9	forward.stored_z	nan	nan	nan	1.0	5.193130970001221
+post_update1001_same_batch	attached_raw	10	forward.decoded_hidden	nan	nan	nan	2.5119098531369444	29.317241668701172
+post_update1001_same_batch	attached_raw	10	forward.innovation_delta	nan	nan	nan	8.78645682608113	45.75096130371094
+post_update1001_same_batch	attached_raw	10	forward.innovation_memory	nan	nan	nan	23.192628386241648	23.232437133789062
+post_update1001_same_batch	attached_raw	10	forward.logits	nan	nan	nan	6.497499041802254	16.721887588500977
+post_update1001_same_batch	attached_raw	10	forward.p	nan	nan	nan	0.6068815440167885	3.1575162410736084
+post_update1001_same_batch	attached_raw	10	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+post_update1001_same_batch	attached_raw	10	forward.stored_z	nan	nan	nan	1.0	5.192916393280029
+post_update1001_same_batch	attached_raw	11	forward.decoded_hidden	nan	nan	nan	2.5131914747492528	29.290931701660156
+post_update1001_same_batch	attached_raw	11	forward.innovation_delta	nan	nan	nan	8.789658308546914	45.69438934326172
+post_update1001_same_batch	attached_raw	11	forward.innovation_memory	nan	nan	nan	23.197717667118013	23.21483612060547
+post_update1001_same_batch	attached_raw	11	forward.logits	nan	nan	nan	6.4756313219226485	16.739852905273438
+post_update1001_same_batch	attached_raw	11	forward.p	nan	nan	nan	0.6069585382981648	3.1561286449432373
+post_update1001_same_batch	attached_raw	11	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+post_update1001_same_batch	attached_raw	11	forward.stored_z	nan	nan	nan	1.0	5.1928205490112305
+post_update1001_same_batch	attached_raw	12	forward.decoded_hidden	nan	nan	nan	2.514388912005355	29.3005428314209
+post_update1001_same_batch	attached_raw	12	forward.innovation_delta	nan	nan	nan	8.791046381093292	45.6702880859375
+post_update1001_same_batch	attached_raw	12	forward.innovation_memory	nan	nan	nan	23.19992303857598	23.20733642578125
+post_update1001_same_batch	attached_raw	12	forward.logits	nan	nan	nan	6.453326542423753	16.741287231445312
+post_update1001_same_batch	attached_raw	12	forward.p	nan	nan	nan	0.6069919168957475	3.1555347442626953
+post_update1001_same_batch	attached_raw	12	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+post_update1001_same_batch	attached_raw	12	forward.stored_z	nan	nan	nan	1.0	5.192777633666992
+post_update1001_same_batch	attached_raw	13	forward.decoded_hidden	nan	nan	nan	2.515521974673927	29.309532165527344
+post_update1001_same_batch	attached_raw	13	forward.innovation_delta	nan	nan	nan	8.791649580020074	45.65985870361328
+post_update1001_same_batch	attached_raw	13	forward.innovation_memory	nan	nan	nan	23.200881004351235	23.2040958404541
+post_update1001_same_batch	attached_raw	13	forward.logits	nan	nan	nan	6.431999309661512	16.656827926635742
+post_update1001_same_batch	attached_raw	13	forward.p	nan	nan	nan	0.6070064306260735	3.155278205871582
+post_update1001_same_batch	attached_raw	13	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+post_update1001_same_batch	attached_raw	13	forward.stored_z	nan	nan	nan	1.0	5.1927595138549805
+post_update1001_same_batch	attached_raw	14	forward.decoded_hidden	nan	nan	nan	2.5166334948652804	29.30805015563965
+post_update1001_same_batch	attached_raw	14	forward.innovation_delta	nan	nan	nan	8.791912078860758	45.655357360839844
+post_update1001_same_batch	attached_raw	14	forward.innovation_memory	nan	nan	nan	23.201298713687432	23.202693939208984
+post_update1001_same_batch	attached_raw	14	forward.logits	nan	nan	nan	6.413005168507455	16.517230987548828
+post_update1001_same_batch	attached_raw	14	forward.p	nan	nan	nan	0.607012733817126	3.155165672302246
+post_update1001_same_batch	attached_raw	14	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+post_update1001_same_batch	attached_raw	14	forward.stored_z	nan	nan	nan	1.0	5.192750930786133
+post_update1001_same_batch	attached_raw	15	forward.decoded_hidden	nan	nan	nan	2.5177827949933866	29.298072814941406
+post_update1001_same_batch	attached_raw	15	forward.innovation_delta	nan	nan	nan	8.792025089264499	45.65338897705078
+post_update1001_same_batch	attached_raw	15	forward.innovation_memory	nan	nan	nan	23.20147848129333	23.20208168029785
+post_update1001_same_batch	attached_raw	15	forward.logits	nan	nan	nan	6.397518622614742	16.352325439453125
+post_update1001_same_batch	attached_raw	15	forward.p	nan	nan	nan	0.6070154607296055	3.155118227005005
+post_update1001_same_batch	attached_raw	15	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+post_update1001_same_batch	attached_raw	15	forward.stored_z	nan	nan	nan	1.0	5.192748546600342
+post_update1001_same_batch	attached_raw	16	forward.decoded_hidden	nan	nan	nan	2.518971400496101	29.301151275634766
+post_update1001_same_batch	attached_raw	16	forward.innovation_delta	nan	nan	nan	8.792074680328486	45.652549743652344
+post_update1001_same_batch	attached_raw	16	forward.innovation_memory	nan	nan	nan	23.20155620574969	23.201824188232422
+post_update1001_same_batch	attached_raw	16	forward.logits	nan	nan	nan	6.384252396233631	16.287086486816406
+post_update1001_same_batch	attached_raw	16	forward.p	nan	nan	nan	0.6070166379213353	3.155097007751465
+post_update1001_same_batch	attached_raw	16	forward.stored_memory	nan	nan	nan	1.0	1.0000001192092896
+post_update1001_same_batch	attached_raw	16	forward.stored_z	nan	nan	nan	1.0	5.192747116088867
+post_update1001_same_batch	attached_raw	0	all	3.195414748042822	34.96934169446485	0.5041477206764606		

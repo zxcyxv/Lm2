@@ -1,0 +1,14 @@
+key	value
+checkpoint_epoch	1
+checkpoint_update	292
+attempted_start_epoch	2
+attempted_microbatch	16
+effective_batch	32
+gradient_accumulations	2
+precision	strict_float32_no_tf32
+status	oom_before_update_293
+requested_bytes	811597824
+free_bytes_at_failure	635238400
+allocated_bytes_at_failure	15945066086
+checkpoint_changed	false
+metrics_changed	false
